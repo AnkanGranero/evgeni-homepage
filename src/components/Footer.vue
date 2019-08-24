@@ -6,7 +6,7 @@
       </p>
 
       <a href="mailto:spitfire_ww_2@hotmail.com">
-        <img src="./logos/mail.png" />
+        <img src="/logos/mail.png" />
       </a>
       <p>
         <span>spitfire_ww_2@hotmail.com</span>
