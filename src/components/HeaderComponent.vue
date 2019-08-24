@@ -4,23 +4,23 @@
       <div class="topMenu">
         <div class="nameWrapper">
           <h2>EVGENI LEONOV</h2>
-          <img src="/logos/hamburger.png" class="hamburger" @click="clickedHamburger" />
+          <img src="./logos/hamburger.png" class="hamburger" @click="clickedHamburger" />
         </div>
         <div class="logoWrapper">
           <a href="mailto:spitfire_ww_2@hotmail.com">
-            <img src="/logos/mail.png" />
+            <img src="./logos/mail.png" />
           </a>
           <a href="https://www.facebook.com/evgeni.leonov">
-            <img src="/logos/facebook.png" />
+            <img src="./logos/facebook.png" />
           </a>
           <a href="https://www.instagram.com/gagarinleonov/">
-            <img src="/logos/instagram.png" />
+            <img src="./logos/instagram.png" />
           </a>
           <a href="https://open.spotify.com/album/6WX0djbY030PdzVXdA6pSV">
-            <img src="/logos/spotify.png" />
+            <img src="./logos/spotify.png" />
           </a>
           <a href="https://www.youtube.com/channel/UCkkFoTv_sk6_oVkLrV_tjrg">
-            <img src="/logos/youtube.png" />
+            <img src="./logos/youtube.png" />
           </a>
         </div>
       </div>
