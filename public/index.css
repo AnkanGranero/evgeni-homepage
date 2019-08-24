@@ -1,0 +1,172 @@
+
+ @font-face {
+    font-family: "Ilisarniq-Demi";
+    src: url("./fonts/Ilisarniq-Demi.eot");
+    src: url("./fonts/Ilisarniq-Demi.eot?#iefix") format("embedded-opentype"),
+      url("./fonts/Ilisarniq-Demi.woff2") format("woff2"),
+      url("./fonts/Ilisarniq-Demi.woff") format("font-woff"),
+      url("./fonts/Ilisarniq-Demi.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Ilisarniq-Light';
+    src: url('Ilisarniq-Light.eot');
+    src: url('Ilisarniq-Light.eot?#iefix') format('embedded-opentype'),
+         url('Ilisarniq-Light.woff2') format('woff2'),
+         url('Ilisarniq-Light.woff') format('woff'),
+         url('Ilisarniq-Light.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Ilisarniq-DemiItalic';
+    src: url('./fonts/Ilisarniq-DemiItalic.eot');
+    src: url('./fonts/Ilisarniq-DemiItalic.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Ilisarniq-DemiItalic.woff2') format('woff2'),
+         url('./fonts/Ilisarniq-DemiItalic.woff') format('font-woff'),
+         url('./fonts/Ilisarniq-DemiItalic.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Ilisarniq-LightItalic';
+    src: url('./fonts/Ilisarniq-LightItalic.eot');
+    src: url('./fonts/Ilisarniq-LightItalic.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Ilisarniq-LightItalic.woff2') format('woff2'),
+         url('./fonts/Ilisarniq-LightItalic.woff') format('woff'),
+         url('./fonts/Ilisarniq-LightItalic.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  
+
+body {
+    font-family: "Ilisarniq-Demi";
+    color: black;
+    margin: 0%;
+    
+    
+}
+
+
+
+
+
+span { font-family: 'Ilisarniq-LightItalic';
+  color:green;
+     
+}
+
+
+
+
+
+h2{
+    font-size: 60px;
+    margin-bottom:0px;
+    
+    margin-top: 0px;
+    letter-spacing: 4px;
+    color: rgb(0, 0, 0);
+    
+    
+} 
+h3 {
+    font-family: 'Ilisarniq-LightItalic';
+    font-size: 20px;
+    letter-spacing: 3px;
+ 
+  
+}
+
+h4 {
+     font-size: 30px;
+   
+}
+
+
+p {
+    font-size: 22px;
+    font-family: 'Ilisarniq-LightItalic';
+   
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Ilisarniq-Light";
+ 
+}
+a:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+/* Header-------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* Body------------------------------------------------------------------------------------- */
+
+.body-content {
+  text-align: justify;
+  width: 50%;
+  padding: 20px;
+  align-self: center;
+  overflow: hidden;
+  
+ color: black;
+
+}
+
+
+
+.videoImg {
+  width:768px;
+  height:432px;
+}
+
+
+
+#paGang {
+ 
+  object-position:0% 20%;
+  opacity:0.8;
+  
+  } 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
