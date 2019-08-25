@@ -85,43 +85,112 @@ export default new Vuex.Store({
       {
         id: 1,
         src: "./images/blackNWhite.jpg",
-        class: "long"
+        class: "long",
+        subject: "Evgeni"
       },
       {
         id: 2,
         src: "./images/dreamingOfSpace.jpg",
-        class: "wide"
+        class: "wide",
+        subject: "Evgeni"
       },
-      { id: 3, src: "./images/face.jpg", class: "wide" },
+      { id: 3, src: "./images/face.jpg", class: "wide",
+    subject: "Evgeni" },
       {
         id: 4,
         src: "./images/instruerar.jpeg",
-        class: "wide"
+        class: "wide",
+        subject: "Evgeni"
       },
       {
         id: 5,
         src: "./images/onSet.jpeg",
-        class: "wide"
+        class: "wide",
+        subject: "Evgeni"
       },
       {
         id: 6,
         src: "./images/onSet2.jpeg",
-        class: "wide"
+        class: "wide",
+        subject: "Evgeni"
       },
       {
         id: 7,
         src: "./images/stairs.jpg",
-        class: "long"
+        class: "long",
+        subject: "Evgeni"
       },
       {
         id: 8,
         src: "./images/standing.jpg",
-        class: "long"
+        class: "long",
+        subject: "Evgeni"
       }, {
         id: 9,
         src: "./images/Hej.jpg",
-        class: "long"
+        class: "long",
+        subject: "Evgeni"
+      },
+      {
+        id: 10,
+        src: "./images/viSomAkte.jpg",
+        header: "Vi var de som åkte",
+        bodytext:  `Jag håller på att slutföra dokumentärfilmen
+        Vi var de som åkte som jag regisserat.
+        Den handlar om mormor och morfars flykt från Chile till Sverige efter militärkuppen i Santiago 1973,
+        om hur deras liv blivit påverkade av det som hände.
+        Jag har gjort intervjuer med mormor, morfar, deras barn och med de som blev kvar och levde under diktaturen.
+        Filmen tar upp frågor kring flykt, saknad, sorg, förlust och kärlek som övervinner gränser och avstånd.
+        Kommer snart! `,
+        subject: "miscellaneous"
+      },
+      {
+        id:11,
+        src: "/images/svt.jpg",
+        header:"Vad ska vi göra idag?",
+        bodytext: `Nu är ryska versionen av URs Vad ska vi göra idag ute där jag läst in Bengt! Regisserad av Johanna Oskarsson.`,
+        href:"https://urplay.se/program/209216-vad-ska-vi-gora-idag-ryska-bengt-och-bodil-far-besok",
+        hrefText: "Alla avsnitt finns att lyssna på här",
+        subject: "miscellaneous"
+
+      },
+      {
+        id:12, 
+        src: "/images/geInteUpp.jpg",
+        header:"Ge inte upp musikvideo",
+        bodytext: `Jag har tillsammans med Andreas Granér regisserat Dreaming of Space nya musikvideo Ge inte upp.
+        Tack till Ashley Michael Briggs som filmade och till alla
+        skådespelare och crew som var med!`,
+        href: " https://www.youtube.com/watch?v=8CtTftYQQzs",
+        hrefText: "Kolla in videon här",
+        subject: "miscellaneous"
       }
+    ],
+    logos: [
+      { name:"hamburger" ,
+        src:"./logos/hamburger.png",
+          },
+        { name:"mail" ,
+          href: "mailto:spitfire_ww_2@hotmail.com",
+          src: "./logos/mail.png",
+          type: "logolink"},
+          
+        { name:"facebook" ,
+            href:"https://www.facebook.com/evgeni.leonov" ,
+            src: "./logos/facebook.png",
+            type: "logolink"},
+        { name:"instagram",
+              href:"https://www.instagram.com/gagarinleonov/" ,
+              src:"./logos/instagram.png" ,
+              type: "logolink"},
+        { name:"spotify" ,
+                href: "https://open.spotify.com/album/6WX0djbY030PdzVXdA6pSV",
+                src:"./logos/spotify.png" ,
+                type: "logolink"},
+         {name: "youtube",
+          href:"https://www.youtube.com/channel/UCkkFoTv_sk6_oVkLrV_tjrg",
+          src:"./logos/youtube.png",
+          type: "logolink"}
     ],
     views: [
       { name: "Hej", link: "/" },
@@ -186,6 +255,9 @@ export default new Vuex.Store({
     },
     views: (state) => {
       return state.views
+    },
+    logos: (state) => {
+      return state.logos
     }
   }
 });

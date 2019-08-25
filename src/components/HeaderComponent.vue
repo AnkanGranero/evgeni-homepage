@@ -4,24 +4,10 @@
       <div class="topMenu">
         <div class="nameWrapper">
           <h2>EVGENI LEONOV</h2>
-          <img src="/logos/hamburger.png" class="hamburger" @click="clickedHamburger" />
+          <img src="{logos.hamburger}" class="hamburger" @click="clickedHamburger" />
         </div>
-        <div class="logoWrapper">
-          <a href="mailto:spitfire_ww_2@hotmail.com">
-            <img src="/logos/mail.png" />
-          </a>
-          <a href="https://www.facebook.com/evgeni.leonov">
-            <img src="/logos/facebook.png" />
-          </a>
-          <a href="https://www.instagram.com/gagarinleonov/">
-            <img src="/logos/instagram.png" />
-          </a>
-          <a href="https://open.spotify.com/album/6WX0djbY030PdzVXdA6pSV">
-            <img src="/logos/spotify.png" />
-          </a>
-          <a href="https://www.youtube.com/channel/UCkkFoTv_sk6_oVkLrV_tjrg">
-            <img src="/logos/youtube.png" />
-          </a>
+        <div class="logoWrapper"> 
+          <a v-for="logo in logoLinks" :href="logo.href" :key="logo.name"> <img :src="logo.src" alt=""></a>
         </div>
       </div>
       <div class="menuWrapper">
@@ -79,7 +65,12 @@ export default {
       return this.$store.getters.dropdownContentStatus;
     },
     views() {
-      return this.$store.getters.views.filter(item => item.name != "Video");
+      return this.$store.getters.views.filter(item => item.name != "Video"); }, 
+    logos() {
+      return this.$store.getters.logos
+    },
+    logoLinks() {
+      return this.$store.getters.logos.filter(l => l.type === "logolink")
     }
   }
 };

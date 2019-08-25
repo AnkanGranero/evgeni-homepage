@@ -30,7 +30,7 @@ export default {
 
   computed: {
     pictures() {
-      return this.$store.getters.pictures;
+      return this.$store.getters.pictures.filter(p => p.subject === "Evgeni");
     },
     picturesRow1() {
       console.log(
