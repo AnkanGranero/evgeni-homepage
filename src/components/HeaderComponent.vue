@@ -4,35 +4,40 @@
       <div class="topMenu">
         <div class="nameWrapper">
           <h2>EVGENI LEONOV</h2>
-          <img src="{logos.hamburger}" class="hamburger" @click="clickedHamburger" />
+          <img :src="logoHamburger[0].src" class="hamburger" @click="clickedHamburger" />
         </div>
-        <div class="logoWrapper"> 
-          <a v-for="logo in logoLinks" :href="logo.href" :key="logo.name"> <img :src="logo.src" alt=""></a>
-        </div>
+        <!--         <div class="logoWrapper">
+          <a v-for="logo in logoLinks" :href="logo.href" :key="logo.name">
+            <img :src="logo.src" alt />
+          </a>
+        </div>-->
       </div>
+
       <div class="menuWrapper">
-        <nav>
-          <ul class="menu">
-            <li v-for="view in views" :key="view.name">
-              <router-link :to="view.link">{{view.name}}</router-link>
-            </li>
+        <div class="logoWrapperMobile">
+          <a v-for="logo in logoLinks" :href="logo.href" :key="logo.name">
+            <img :src="logo.src" alt />
+          </a>
+        </div>
+        <div class="menu">
+          <li v-for="view in views" :key="view.name">
+            <router-link :to="view.link">{{view.name}}</router-link>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a class="videoLink">Video</a>
 
-            <li>
-              <div class="dropdown">
-                <a class="videoLink">Video</a>
-
-                <div class="dropdownContent">
-                  <router-link
-                    class="dropdownLink"
-                    v-for="type in videoTypes"
-                    :to="{name: 'video', params: { videoType: type}}"
-                    :key="type.index"
-                  >{{type}}</router-link>
-                </div>
+              <div class="dropdownContent">
+                <router-link
+                  class="dropdownLink"
+                  v-for="type in videoTypes"
+                  :to="{name: 'video', params: { videoType: type}}"
+                  :key="type.index"
+                >{{type}}</router-link>
               </div>
-            </li>
-          </ul>
-        </nav>
+            </div>
+          </li>
+        </div>
       </div>
     </div>
   </div>
@@ -52,7 +57,6 @@ export default {
       this.$store.dispatch("clickedOnPage", true);
     },
     clickedHamburger() {
-      
       this.$store.dispatch("clickedOnHamburger");
     }
   },
@@ -65,19 +69,25 @@ export default {
       return this.$store.getters.dropdownContentStatus;
     },
     views() {
-      return this.$store.getters.views.filter(item => item.name != "Video"); }, 
+      return this.$store.getters.views.filter(item => item.name != "Video");
+    },
     logos() {
-      return this.$store.getters.logos
+      return this.$store.getters.logos;
     },
     logoLinks() {
-      return this.$store.getters.logos.filter(l => l.type === "logolink")
+      return this.$store.getters.logos.filter(l => l.type === "logolink");
+    },
+    logoHamburger() {
+      console.log(
+        this.$store.getters.logos.filter(l => l.name === "hamburger")
+      );
+      return this.$store.getters.logos.filter(l => l.name === "hamburger");
     }
   }
 };
 </script>
 
 <style lang="scss">
-
 li {
   color: white;
   list-style: none;
@@ -146,25 +156,23 @@ a.router-link-exact-active {
   padding-bottom: 0%;
   @media only screen and (max-width: $mobile) {
     flex-wrap: wrap;
-    padding: 0;
+    /*   padding: 0; */
   }
 }
 /* ---------------------------wrappers----------------------------------------------------- */
 .menuWrapper {
   display: flex;
+  background: rgb(176, 246, 255);
 
   width: 100%;
-
- 
+  height: 40px;
 
   @media only screen and (max-width: $mobile) {
-    display: none;
+    top: 76px;
   }
 }
 .headerWrapper {
   @media only screen and (max-width: $mobile) {
-    height: 50px;
-
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -199,28 +207,37 @@ a.router-link-exact-active {
     display: flex;
     flex-direction: row;
 
-    top: 0;
+    top: -10px;
     align-items: center;
     justify-content: space-between;
 
     h2 {
-      font-size: 25px;
+      font-size: 30px;
       letter-spacing: 0;
 
       margin-left: 5%;
+      @media only screen and (max-width: $smallMobile) {
+        font-size: 25px;
+      }
     }
     img {
       display: block;
       height: 70%;
       margin-right: 20px;
+      @media only screen and (max-width: $smallMobile) {
+        height: 60%;
+      }
     }
+  }
+  @media only screen and (max-width: $smallMobile) {
+    top: -5px;
   }
 }
 
 .logoWrapper {
   width: 100%;
   height: 35px;
-  
+
   display: flex;
   justify-content: flex-end;
   margin-right: 2%;
@@ -234,22 +251,74 @@ a.router-link-exact-active {
 .logoWrapper img {
   max-height: 100%;
   margin-right: 30px;
-    @media only screen and (max-width: $pad) {
-   display: none;
+  @media only screen and (max-width: $pad) {
+    display: none;
   }
   @media only screen and (max-width: $mobile) {
     height: 25px;
     display: none;
   }
 }
-.menu { display: flex;
+.logoWrapperMobile {
+  width: 100%;
+  height: 35px;
+  margin-left: 40px;
   white-space: nowrap;
 
-  position: absolute;
-  
-  justify-content: space-between;
-  right:0px;
- /*  margin-top: 2%; */
+  /*   display: flex;
+  justify-content: space-evenly; */
 
+  & a {
+    display: contents;
+  }
+
+  @media only screen and (max-width: $smallMobile) {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.logoWrapperMobile img {
+  max-height: 70%;
+  margin-top: 8px;
+  margin-right: 40px;
+
+  /*   @media only screen and (max-width: $pad) {
+    display: none;
+  }
+  @media only screen and (max-width: $mobile) {
+    height: 25px;
+    display: none;
+  } */
+
+  @media only screen and (max-width: $smallMobile) {
+    margin-right: 0;
+  }
+}
+
+.menu {
+  display: flex;
+  white-space: nowrap;
+
+  justify-content: space-between;
+  align-content: center;
+  right: 0px;
+  width: 100%;
+
+  & li {
+    margin: 30px;
+    margin-top: 6px;
+    padding: 0;
+    @media only screen and (max-width: $pad) {
+      font-size: 17px;
+      margin: 15px;
+      margin-top: 8px;
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    display: none;
+  }
+  /*  margin-top: 2%; */
 }
 </style>

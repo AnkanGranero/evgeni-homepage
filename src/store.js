@@ -15,7 +15,7 @@ export default new Vuex.Store({
 
     }, {
       href: "https://urplay.se/program/209216-vad-ska-vi-gora-idag-ryska-bengt-och-bodil-far-besok?fbclid=IwAR1vX21dOZ1uJc3XOrqaMd7xF9sVdcKJ6l_EDuBVSIyMoidQQVzo6L4lwQU?cmpid=del:cl:20190708:urplay",
-      img: "/images/svt.jpg",
+      img: "/evgeni-homepage/images/svt.jpg",
       type: ["Skådespelare"],
       name: "Vad ska vi göra idag?"
     },
@@ -146,7 +146,7 @@ export default new Vuex.Store({
       },
       {
         id:11,
-        src: "/images/svt.jpg",
+        src: "./images/svt.jpg",
         header:"Vad ska vi göra idag?",
         bodytext: `Nu är ryska versionen av URs Vad ska vi göra idag ute där jag läst in Bengt! Regisserad av Johanna Oskarsson.`,
         href:"https://urplay.se/program/209216-vad-ska-vi-gora-idag-ryska-bengt-och-bodil-far-besok",
@@ -156,7 +156,7 @@ export default new Vuex.Store({
       },
       {
         id:12, 
-        src: "/images/geInteUpp.jpg",
+        src: "./images/geInteUpp.jpg",
         header:"Ge inte upp musikvideo",
         bodytext: `Jag har tillsammans med Andreas Granér regisserat Dreaming of Space nya musikvideo Ge inte upp.
         Tack till Ashley Michael Briggs som filmade och till alla
@@ -171,7 +171,7 @@ export default new Vuex.Store({
         src:"./logos/hamburger.png",
           },
         { name:"mail" ,
-          href: "mailto:spitfire_ww_2@hotmail.com",
+          href: "mailto:evgenileonov1987@gmail.com",
           src: "./logos/mail.png",
           type: "logolink"},
           

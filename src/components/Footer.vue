@@ -1,36 +1,38 @@
     <template>
   <footer class="footerWrapper">
-   
-      <p>
-        <span>Kontakta mig:</span> 070 402 46 06
-      </p>
+    <p>
+      <span>Kontakta mig:</span> 070 402 46 06
+    </p>
 
-      <a href="mailto:spitfire_ww_2@hotmail.com">
-        <img src="/logos/mail.png" />
-      </a>
-      <p>
-        <span>spitfire_ww_2@hotmail.com</span>
-      </p>
-   
+    <a :href="mailLogo[0].href">
+      <img :src="mailLogo[0].src" />
+    </a>
+    <p>
+      <span>evgenileonov1987@gmail.com</span>
+    </p>
   </footer>
 </template>
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
+  computed: {
+    mailLogo() {
+      console.log(this.$store.getters.logos.filter(l => l.name === "mail"));
+      return this.$store.getters.logos.filter(l => l.name === "mail");
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
-
 span {
   color: black;
-  @media only screen and (max-width: $mobile) {
+  @media only screen and (max-width: $pad) {
     display: none;
   }
 }
 .footerWrapper {
   position: absolute;
   width: 100%;
- 
 
   height: 60px;
   background: rgb(141, 235, 141);
@@ -38,7 +40,6 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 
   @media only screen and (max-width: $mobile) {
     flex-wrap: wrap;

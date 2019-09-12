@@ -4,7 +4,7 @@
     <div class="body-wrapper">
  <div v-for="picture in pictures" class="body-content"
       :key="picture.id"> 
-      <div v-if="picture.href"><a><img :src="picture.src"> </a></div>
+      <div v-if="picture.href"><a :href="picture.href"><img :src="picture.src"> </a></div>
      <div v-else><img :src="picture.src"></div>
        <h4>{{picture.header}}</h4> 
         <div class="text-wrapper"><p>{{picture.bodytext}}

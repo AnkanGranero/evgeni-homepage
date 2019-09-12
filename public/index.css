@@ -132,7 +132,7 @@ a:hover {
 /* Body------------------------------------------------------------------------------------- */
 
 .body-content {
-  text-align: justify;
+  text-align: left;
   width: 50%;
   padding: 20px;
   align-self: center;

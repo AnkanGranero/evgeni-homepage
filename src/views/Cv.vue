@@ -11,19 +11,19 @@
             <div class="personalDetails">
               <p>Född: 1987.03.06</p>
               <p>Telefon: 070-402 46 06</p>
-              <p>E-mail: spitfire_ww_2@hotmail.com</p>
+              <p>E-mail: evgenileonov1987@gmail.com</p>
             </div>
           </div>
 
           <div class="meritWrapper">
             <h4>Utbildning</h4>
             <div>
-            <p>Filmskådespeleri 2, 30 hp Stockholms dramatiska högskola 2018-2019</p>
-            <p>Åsa folkhögskola: grundutbildning rysk – svensk kontakttolk 2017-2018</p>
-            <p>Filmskådespeleri 1 30 hp Stockholms dramatiska högskola 2014</p>
-            <p>Teaterhögskolan i Stockholm 2007-2010 (skådespelarprogrammet)</p>
-            <p>Studiefrämjandet: Monologkurs 2007</p>
-            <p>St:Eriks gymnasium, teaterlinjen 2003-2006</p>
+              <p>Filmskådespeleri 2, 30 hp Stockholms dramatiska högskola 2018-2019</p>
+              <p>Åsa folkhögskola: grundutbildning rysk – svensk kontakttolk 2017-2018</p>
+              <p>Filmskådespeleri 1 30 hp Stockholms dramatiska högskola 2014</p>
+              <p>Teaterhögskolan i Stockholm 2007-2010 (skådespelarprogrammet)</p>
+              <p>Studiefrämjandet: Monologkurs 2007</p>
+              <p>St:Eriks gymnasium, teaterlinjen 2003-2006</p>
             </div>
           </div>
           <div class="meritWrapper">
@@ -41,9 +41,13 @@
               <h5>Vi som blev kvar</h5>
               <p>Teateri. Roller: Bloggaren, Wilhelm, Ivan.</p>
             </div>
+            <div>
+              <h5>LANA 24-7</h5>
+              <p>Teateri. Roller: Evgeni Leonov, Pappan, Roboten, Lillasystern. Regi: Vera Veljovic 2015</p>
+            </div>
 
             <div>
-              <h5>Det Värdefdivla</h5>
+              <h5>Det Värdefulla</h5>
               <p>Roll: Sam. Regi: Gunilla Johansson 2013</p>
             </div>
             <div>
@@ -83,9 +87,10 @@
             </div>
 
             <h4>Tv och Film</h4>
+
             <div>
               <p>
-                Handelsanställdas fackförbund
+                Hyvlingsfällan Handelsanställdas fackförbund
                 Roll: Programledare Regi: Stefan Wrenfelt 2018
               </p>
             </div>
@@ -190,8 +195,7 @@
             <h4>Övrigt</h4>
             <div>
               <p>Har ryska och spanska som modersmål.</p>
-              <p>Varit Ersättare i Vård och omsorgsnämnden</p>
-              <p>Vänsterpartiet Sollentuna 2019</p>
+              <p>Varit Ersättare i Vård och omsorgsnämnden i Vänsterpartiet Sollentuna 2019</p>
               <p>EU-valledare för Vänsterpartiet i Sollentuna 2019</p>
               <p>Arbetar som volontär för Kompis Sverige.</p>
               <p>Driver den ideella föreningen Scenkonst nu.</p>
@@ -222,23 +226,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
 h4 {
   font-family: "Ilisarniq-Light";
   text-align: center;
   margin-bottom: 2em;
   font-size: 30px;
-   @media only screen and (max-width: $mobile) {
-    margin-top:2em;
-    }
+  @media only screen and (max-width: $mobile) {
+    margin-top: 2em;
+  }
 }
 h5 {
   font-size: 22px;
   margin-bottom: 10px;
   @media only screen and (max-width: $mobile) {
     font-size: 19px;
-    }
+  }
 }
 p {
   margin-top: 2px;
@@ -251,20 +253,20 @@ ul {
   margin-top: 7em;
   text-align: left;
   @media only screen and (max-width: $mobile) {
-    margin-top:1em;}
+    margin-top: 1em;
+  }
 }
 
-
-  .cvLista li{
-    color: black;
-    list-style: none;
-    font-size: 22px;
-    font-family: 'Ilisarniq-LightItalic';
-    margin:0px;
-    @media only screen and (max-width: $mobile) {
-    font-size: 19px}
-
+.cvLista li {
+  color: black;
+  list-style: none;
+  font-size: 22px;
+  font-family: "Ilisarniq-LightItalic";
+  margin: 0px;
+  @media only screen and (max-width: $mobile) {
+    font-size: 19px;
   }
+}
 .imgWrapper {
   display: block;
   position: relative;
@@ -286,22 +288,19 @@ ul {
 
 .personalDetails {
   text-align: left;
-  
 }
 .personalDetails p {
-   @media only screen and (max-width: $mobile) {
-   /* font-size:16px; */
-    }
-
+  @media only screen and (max-width: $mobile) {
+    /* font-size:16px; */
+  }
 }
 .personalWrapper {
   margin: 5em;
   display: flex;
   justify-content: center;
   @media only screen and (max-width: $mobile) {
-   margin:4em;
-    }
- 
+    margin: 4em;
+  }
 }
 a.dropDownLink {
   color: green;
