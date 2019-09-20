@@ -243,9 +243,6 @@ a.router-link-exact-active {
   margin-right: 2%;
   flex: 1 1 360px;
   @media only screen and (max-width: $mobile) {
-    /* margin-top: 15%;
-    display: flex;
-    justify-content: center; */
   }
 }
 .logoWrapper img {
@@ -282,14 +279,6 @@ a.router-link-exact-active {
   max-height: 70%;
   margin-top: 8px;
   margin-right: 40px;
-
-  /*   @media only screen and (max-width: $pad) {
-    display: none;
-  }
-  @media only screen and (max-width: $mobile) {
-    height: 25px;
-    display: none;
-  } */
 
   @media only screen and (max-width: $smallMobile) {
     margin-right: 0;

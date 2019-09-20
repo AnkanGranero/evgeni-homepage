@@ -51,14 +51,17 @@ export default {
 
     align-items: center;
     ul {
-      height: 100%;
+      /*    height: 80%;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: space-evenly; */
     }
     li {
+      padding: 10px;
       a {
         color: white;
+
+        white-space: nowrap;
       }
     }
   }

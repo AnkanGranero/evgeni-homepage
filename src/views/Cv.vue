@@ -48,7 +48,7 @@
 
             <div>
               <h5>Det Värdefulla</h5>
-              <p>Roll: Sam. Regi: Gunilla Johansson 2013</p>
+              <p>Teateri. Roll: Sam. Regi: Gunilla Johansson 2013</p>
             </div>
             <div>
               <h5>Flight To Santiago</h5>
@@ -89,13 +89,12 @@
             <h4>Tv och Film</h4>
 
             <div>
-              <p>
-                Hyvlingsfällan Handelsanställdas fackförbund
-                Roll: Programledare Regi: Stefan Wrenfelt 2018
-              </p>
+              <h5>Hyvlingsfällan</h5>
+              <!--  <p>Handelsanställdas fackförbund</p> -->
+              <p>Roll: Programledare Regi: Stefan Wrenfelt 2018</p>
             </div>
             <div>
-              <h5>Johan Falk:Slutet Strix drama</h5>
+              <h5>Johan Falk: Slutet</h5>
               <p>
                 Strix drama Roll: Kaganovich.
                 Regi: Rikard Holm. 2015
@@ -108,18 +107,19 @@
             <div>
               <h5>Kardo</h5>
               <p>
-                VGIK (Ryska filmhögskolan) Roll: Rysktalande man.
+                VGIK (Ryska filmhögskolan)
+                Roll: Rysktalande man.
                 Regi: Svetlana Sigaleva 2012
               </p>
             </div>
             <div>
-              <h5>Aphelium Roll:</h5>
-              <p>Självmordsbombare. Regi: Mikis Mazarakiz 2006</p>
+              <h5>Aphelium</h5>
+              <p>Roll: Självmordsbombare. Regi: Mikis Mazarakiz 2006</p>
             </div>
             <div>
               <h5>Momentum (Kortfilm)</h5>
               <p>
-                Ung kille.
+                Roll: Ung kille.
                 Regi: Malin Berg, Andreas Tillnert och Fabian Yanez 2004
               </p>
             </div>
@@ -177,8 +177,10 @@
               <p>Sjunger och komponerar låtar i bandet Dreaming of Space.</p>
               <p>Musikledare på Bambi. 2017 – nuvarande</p>
               <p>Komponerade musiken till Bara va kompis för Kompis Sverige. 2019</p>
-              <p>Komponerade musiken till 4:e teaterns föreställning</p>
-              <p>20 sätt att överleva högstadiet. 2015</p>
+              <p>
+                Komponerade musiken till 4:e teaterns föreställning
+                20 sätt att överleva högstadiet. 2015
+              </p>
             </div>
           </div>
           <div class="meritWrapper">

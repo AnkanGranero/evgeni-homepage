@@ -205,7 +205,7 @@ li {
     margin-bottom: 14%;
   }
   @media only screen and (max-width: $mobile) {
-    margin-top: 30%;
+    margin-top: 120px;
     margin-bottom: 0;
   }
 }
