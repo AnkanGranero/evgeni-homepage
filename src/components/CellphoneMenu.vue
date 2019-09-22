@@ -38,7 +38,7 @@ export default {
   .cellphoneMenuWrapper {
     display: flex;
     position: fixed;
-    background: rgb(0, 0, 0, 0.6);
+    background: rgb(0, 0, 0, 0.8);
 
     height: 100%;
     width: 100%;
@@ -51,10 +51,10 @@ export default {
 
     align-items: center;
     ul {
-      /*    height: 80%;
+      height: 90%;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly; */
+      justify-content: space-evenly;
     }
     li {
       padding: 10px;
