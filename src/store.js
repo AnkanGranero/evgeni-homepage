@@ -209,9 +209,12 @@ export default new Vuex.Store({
       state.videoDropDownIsActive = payload
       
     },
-    changeCellphoneMenuStatus(state, payload) {
+    toggleCellphoneMenuStatus(state) {
 
       state.showCellphoneMenu = !state.showCellphoneMenu
+    },
+    changeCellphoneMenuStatus(state, payload) {
+      state.showCellphoneMenu = payload
     },
     changeVideoType(state, payload) {
 
@@ -227,7 +230,13 @@ export default new Vuex.Store({
       commit("changeVideoDropDownState", payload)
     },
     clickedOnHamburger({ commit }) {
-      commit("changeCellphoneMenuStatus")
+      console.log("clicked");
+      
+      commit("toggleCellphoneMenuStatus")
+    },
+    closeOverlay({commit}, payload) {
+      commit("changeCellphoneMenuStatus", payload)
+      console.log("pajjan",payload)
     },
     clickedVideoType({ commit}, payload) {
       commit("changeVideoType", payload)

@@ -1,14 +1,14 @@
 <template>
-  <div class="cellphoneMenuWrapper">
+  <div class="cellphoneMenuWrapper" @click="closeOverlay">
     <ul>
       <li v-for="view in views" :key="view.name">
         <router-link
           v-if="view.params"
-          @click.native="clickedOnLink"
+          @click.native="closeOverlay"
           size="phone"
           :to="{name: 'video', params: { videoType: 'Skådespelare'}}"
         >{{view.name}}</router-link>
-        <router-link v-else @click.native="clickedOnLink" :to="view.link">{{view.name}}</router-link>
+        <router-link v-else @click.native="closeOverlay" :to="view.link">{{view.name}}</router-link>
       </li>
     </ul>
   </div>
@@ -24,8 +24,8 @@ export default {
     }
   },
   methods: {
-    clickedOnLink() {
-      this.$store.dispatch("clickedOnHamburger");
+    closeOverlay() {
+      this.$store.dispatch("closeOverlay", false);
     }
   }
 };
@@ -42,11 +42,11 @@ export default {
 
     height: 100%;
     width: 100%;
-    top: 40px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 2;
+    z-index: 4;
     justify-content: space-evenly;
 
     align-items: center;
