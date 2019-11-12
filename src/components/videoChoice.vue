@@ -29,6 +29,5 @@ export default {
     videosByType() {
       return this.videos.filter(v => v.type.includes(this.$props.videoType));
     }
-  },
-  methods: {}
+  }
 };

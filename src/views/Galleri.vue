@@ -33,9 +33,6 @@ export default {
       return this.$store.getters.pictures.filter(p => p.subject === "Evgeni");
     },
     picturesRow1() {
-      console.log(
-        this.$store.getters.pictures.filter(picture => picture.id < 4)
-      );
       return this.$store.getters.pictures.filter(picture => picture.id < 4);
     },
     picturesRow2() {
@@ -59,8 +56,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-
-
 #gallery {
   /* height: 100vh; */
   /* margin-bottom: 10%; */
@@ -71,13 +66,13 @@ export default {
 }
 
 .wrapper {
-  margin:5%;
+  margin: 5%;
   /* width: 90vw;
   height: 90vw; */
   /* min-width: 300px;
   min-height: 300px; */
   overflow: hidden;
- 
+
   @media only screen and (max-width: $mobile) {
     height: 90vh;
     margin-bottom: 0;
@@ -88,7 +83,7 @@ export default {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 30% 30% 30%;
-  
+
   grid-gap: 5%;
   top: 0;
   left: 0;

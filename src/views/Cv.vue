@@ -220,7 +220,6 @@ export default {
   },
   computed: {
     pictures() {
-      console.log(this.$store.getters.pictures);
       return this.$store.getters.pictures;
     }
   }

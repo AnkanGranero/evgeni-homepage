@@ -6,11 +6,6 @@
           <h2>EVGENI LEONOV</h2>
           <img :src="logoHamburger[0].src" class="hamburger" @click="clickedHamburger" />
         </div>
-        <!--         <div class="logoWrapper">
-          <a v-for="logo in logoLinks" :href="logo.href" :key="logo.name">
-            <img :src="logo.src" alt />
-          </a>
-        </div>-->
       </div>
 
       <div class="menuWrapper">
@@ -78,9 +73,6 @@ export default {
       return this.$store.getters.logos.filter(l => l.type === "logolink");
     },
     logoHamburger() {
-      console.log(
-        this.$store.getters.logos.filter(l => l.name === "hamburger")
-      );
       return this.$store.getters.logos.filter(l => l.name === "hamburger");
     }
   }

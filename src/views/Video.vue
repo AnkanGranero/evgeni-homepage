@@ -50,8 +50,6 @@ export default {
   },
   methods: {
     clickedVideoType(payload) {
-      console.log(payload);
-
       this.store.dispatch(clickedVideoType, payload);
     }
   }
@@ -59,7 +57,7 @@ export default {
 </script>
 
 
-<style <style lang="scss" scoped>
+<style lang="scss" scoped>
 > .video-body {
   display: flex;
   flex-direction: column;

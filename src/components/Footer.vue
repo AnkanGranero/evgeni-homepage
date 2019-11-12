@@ -17,7 +17,6 @@ export default {
   name: "Footer",
   computed: {
     mailLogo() {
-      console.log(this.$store.getters.logos.filter(l => l.name === "mail"));
       return this.$store.getters.logos.filter(l => l.name === "mail");
     }
   }

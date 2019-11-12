@@ -230,13 +230,13 @@ export default new Vuex.Store({
       commit("changeVideoDropDownState", payload)
     },
     clickedOnHamburger({ commit }) {
-      console.log("clicked");
+
       
       commit("toggleCellphoneMenuStatus")
     },
     closeOverlay({commit}, payload) {
       commit("changeCellphoneMenuStatus", payload)
-      console.log("pajjan",payload)
+     
     },
     clickedVideoType({ commit}, payload) {
       commit("changeVideoType", payload)
