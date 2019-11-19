@@ -15,6 +15,9 @@
 import HeaderComponent from "./components/HeaderComponent.vue";
 import Footer from "./components/Footer.vue";
 import CellPhoneMenu from "./components/CellphoneMenu.vue";
+import { createClient } from "./components/contentful.js";
+
+const client = createClient();
 
 export default {
   name: "app",
