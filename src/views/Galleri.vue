@@ -67,10 +67,6 @@ export default {
 
 .wrapper {
   margin: 5%;
-  /* width: 90vw;
-  height: 90vw; */
-  /* min-width: 300px;
-  min-height: 300px; */
   overflow: hidden;
 
   @media only screen and (max-width: $mobile) {

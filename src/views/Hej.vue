@@ -3,9 +3,7 @@
     <h1>Hej!</h1>
     <div class="body-wrapper">
       <div class="body-content">
-        <!-- <div class="imgWrapper"> -->
         <img src="images/Hej.jpg" id="hej" />
-        <!--  </div> -->
 
         <p>Jag heter Evgeni Leonov och är 32 år gammal. Jag utbildade mig till skådespelare på Teaterhögskolan i Stockholm 2007-2010. Sedan jag blev färdig med utbildningen har jag arbetat som frilansande skådespelare i olika delar av Sverige. B.la. på Smålands musik och teater och Teateri i Jönköping och på 4:e teatern i Västerås. Jag har medverkat i många föreställningar som varit riktade till ungdomar och turnerat runt om i Sverige i flera år. En av dessa föreställningar har varit en egenskriven monologföreställning som jag har spelat i både Sverige och Ryssland på svenska, ryska och spanska. Jag har även medverkat i film och reklam, b.la. Johan Falk och Ikea.</p>
         <p>
@@ -29,22 +27,9 @@ export default {
 </script>
 
 <style scoped>
-/* .imgWrapper img {
-  object-fit: cover;
-  width: 1800px;
-  height: 400px;
-}
-.imgWrapper {
-  width: 1800px;
-  height: 400px;
-  background: rgb(216, 236, 113);
-  margin-bottom: 100px;
-} */
 img {
   width: 100%;
   background: black;
   margin-bottom: 10%;
 }
-
-
 </style>
