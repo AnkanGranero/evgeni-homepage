@@ -9,7 +9,7 @@ import Video from "./views/Video.vue";
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
+
   base: process.env.BASE_URL,
   routes: [
     {
@@ -39,5 +39,8 @@ export default new Router({
       component: Video
     },
 
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+  return { x: 0, y: 0 }
+}
 });

@@ -13,17 +13,16 @@
 
 <script>
 import HeaderComponent from "./components/HeaderComponent.vue";
-import Footer from "./components/Footer.vue";
+import BackToTop from "./components/BackToTop.vue";
 import CellPhoneMenu from "./components/CellphoneMenu.vue";
-import { createClient } from "./components/contentful.js";
-
-const client = createClient();
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "app",
   components: {
     HeaderComponent,
     CellPhoneMenu,
+    BackToTop,
     Footer
   },
   computed: {

@@ -15,7 +15,7 @@ export default new Vuex.Store({
 
     }, {
       href: "https://urplay.se/program/209216-vad-ska-vi-gora-idag-ryska-bengt-och-bodil-far-besok?fbclid=IwAR1vX21dOZ1uJc3XOrqaMd7xF9sVdcKJ6l_EDuBVSIyMoidQQVzo6L4lwQU?cmpid=del:cl:20190708:urplay",
-      img: "/evgeni-homepage/images/svt.jpg",
+      img: "/images/svt.jpg",
       type: ["Skådespelare"],
       name: "Vad ska vi göra idag?"
     },
@@ -192,6 +192,7 @@ export default new Vuex.Store({
           src:"./logos/youtube.png",
           type: "logolink"}
     ],
+    arrow:"./images/arrow.png",
     views: [
       { name: "Hej", link: "/" },
       { name: "På gång", link: "/Pagang" },
@@ -267,6 +268,9 @@ export default new Vuex.Store({
     },
     logos: (state) => {
       return state.logos
+    },
+    arrow: state => {
+      return state.arrow
     }
   }
 });
