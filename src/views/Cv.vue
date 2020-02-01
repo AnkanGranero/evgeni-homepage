@@ -39,7 +39,7 @@
             </div>
             <div>
               <h5>Vi som blev kvar</h5>
-              <p>Teateri. Roller: Bloggaren, Wilhelm, Ivan.</p>
+              <p>Teateri. Roller: Bloggaren, Wilhelm, Ivan. Regi: Anna Sjövall 2015</p>
             </div>
             <div>
               <h5>LANA 24-7</h5>
