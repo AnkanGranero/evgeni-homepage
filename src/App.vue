@@ -25,6 +25,18 @@ export default {
     BackToTop,
     Footer
   },
+  metaInfo() {
+    return {
+      title: "Evgeni-Leonov",
+      meta: [
+        {
+          vmid: "description",
+          name: "description",
+          content: "hemsida till skådespelare/musiker/regisörr Evgeni Leonov"
+        }
+      ]
+    };
+  },
   computed: {
     videoDropDownStatus() {
       return this.$store.getters.videoDropDownStatus;
