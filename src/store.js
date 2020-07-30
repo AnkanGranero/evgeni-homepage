@@ -72,10 +72,16 @@ export default new Vuex.Store({
       name: "Moskva - Dreaming Of Space",
       site: "youtube",
     },
-    {
-      link: "https://www.youtube.com/embed/HvZ7DEnwFAQ",
+  {
+      link: "https://www.youtube.com/embed/Pu_svKwBz4M",
       type: ["Musik"],
       name: "Motstånd - Dreaming Of Space",
+      site: "youtube",
+
+    },{
+          link: "https://www.youtube.com/embed/YM7jDVzcufM",
+      type: ["Musik"],
+      name: "Kapitalism - Dreaming Of Space",
       site: "youtube",
 
     },
