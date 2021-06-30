@@ -1,8 +1,8 @@
 <template>
   <div id="aktuelltWrapper">
     <h1>Aktuellt!</h1>
-    <div class="body-wrapper">
-      <div v-for="news in newsObject" class="body-content" :key="news.id">
+    <div class="body-wrapper body-content">
+      <div v-for="news in newsObject" :key="news.id">
         <h4>{{ news.header }}</h4>
         <div class="text-wrapper">
           <p>{{ news.bodytext }}</p>
@@ -33,6 +33,8 @@ export default {
 <style scoped>
 .body-wrapper {
   margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
 }
 img {
   width: 100%;
@@ -44,7 +46,8 @@ h4 {
   text-align: center;
 }
 #aktuelltWrapper {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 
 .text-wrapper {
