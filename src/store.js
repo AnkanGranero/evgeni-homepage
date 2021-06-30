@@ -75,13 +75,13 @@ export default new Vuex.Store({
   {
       link: "https://www.youtube.com/embed/Pu_svKwBz4M",
       type: ["Musik"],
-      name: "Motstånd - Dreaming Of Space",
+      name: "Motstånd - Evgeni Leonov",
       site: "youtube",
 
     },{
-          link: "https://www.youtube.com/embed/YM7jDVzcufM",
+          link: "https://www.youtube.com/embed/CNbW8C3qgx4",
       type: ["Musik"],
-      name: "Kapitalism - Dreaming Of Space",
+      name: "Kapitalism - Evgeni Leonov",
       site: "youtube",
 
     },
@@ -137,40 +137,7 @@ export default new Vuex.Store({
         class: "long",
         subject: "Evgeni"
       },
-      {
-        id: 10,
-        src: "./images/viSomAkte.jpg",
-        header: "Vi var de som åkte",
-        bodytext:  `Jag håller på att slutföra dokumentärfilmen
-        Vi var de som åkte som jag regisserat.
-        Den handlar om mormor och morfars flykt från Chile till Sverige efter militärkuppen i Santiago 1973,
-        om hur deras liv blivit påverkade av det som hände.
-        Jag har gjort intervjuer med mormor, morfar, deras barn och med de som blev kvar och levde under diktaturen.
-        Filmen tar upp frågor kring flykt, saknad, sorg, förlust och kärlek som övervinner gränser och avstånd.
-        Kommer snart! `,
-        subject: "miscellaneous"
-      },
-      {
-        id:11,
-        src: "./images/svt.jpg",
-        header:"Vad ska vi göra idag?",
-        bodytext: `Nu är ryska versionen av URs Vad ska vi göra idag ute där jag läst in Bengt! Regisserad av Johanna Oskarsson.`,
-        href:"https://urplay.se/program/209216-vad-ska-vi-gora-idag-ryska-bengt-och-bodil-far-besok",
-        hrefText: "Alla avsnitt finns att lyssna på här",
-        subject: "miscellaneous"
-
-      },
-      {
-        id:12, 
-        src: "./images/geInteUpp.jpg",
-        header:"Ge inte upp musikvideo",
-        bodytext: `Jag har tillsammans med Andreas Granér regisserat Dreaming of Space nya musikvideo Ge inte upp.
-        Tack till Ashley Michael Briggs som filmade och till alla
-        skådespelare och crew som var med!`,
-        href: " https://www.youtube.com/watch?v=8CtTftYQQzs",
-        hrefText: "Kolla in videon här",
-        subject: "miscellaneous"
-      }
+      
     ],
     logos: [
       { name:"hamburger" ,
@@ -201,7 +168,7 @@ export default new Vuex.Store({
     arrow:"./images/arrow.png",
     views: [
       { name: "Hej", link: "/" },
-      { name: "På gång", link: "/Pagang" },
+      { name: "Aktuellt", link: "/Aktuellt" },
       { name: "Galleri", link: "/Galleri" },
       { name: "Video", link: "/Video", params: ["Skådespelare", "Regissör", "Musik"],  },
       { name: "Cv", link: "/Cv" }

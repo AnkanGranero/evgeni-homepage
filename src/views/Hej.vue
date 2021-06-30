@@ -3,7 +3,7 @@
     <h1>Hej!</h1>
     <div class="body-wrapper">
       <div class="body-content">
-        <img src="images/Hej.jpg" id="hej" />
+        <img src="images/Evgeni-turkos.jpeg" id="hej" />
 
         <p>
           Jag heter Evgeni Leonov och är {{ age }} år gammal. Jag utbildade mig
@@ -15,7 +15,9 @@
           turnerat runt om i Sverige i flera år. En av dessa föreställningar har
           varit en egenskriven monologföreställning som jag har spelat i både
           Sverige och Ryssland på svenska, ryska och spanska. Jag har även
-          medverkat i film och reklam, b.la. Johan Falk och Ikea.
+          medverkat i film och reklam, bl.a. Johan Falk: Slutet, Ikea och dom
+          kommande tv-serierna Bäckström säsong 2, Drugdealer och Eagles säsong
+          3.
         </p>
         <p>
           På Stockholms dramatiska högskola har jag gått kurserna
@@ -23,8 +25,8 @@
           Där fick jag lära mig mer om filmmanusarbete, regi, klippning och
           filmande. Inspirerad av kurserna började jag arbeta bakom kameran. Jag
           har gjort två kampanjfilmer för Kompis Sverige, flera musikvideos till
-          mitt band och håller nu på att färdigställa en dokumentärfilm om min
-          familjs flykt från Pinochetregimen i Chile.
+          mitt band och en dokumentärfilm som handlar om min familjs flykt från
+          Pinochetregimen i Chile.
         </p>
 
         <p>

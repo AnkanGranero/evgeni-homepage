@@ -3,7 +3,7 @@ import Router from "vue-router";
 import Hej from "./views/Hej.vue";
 import Galleri from "./views/Galleri.vue";
 import Cv from "./views/Cv.vue";
-import Pagang from "./views/Pagang.vue";
+import Aktuellt from "./views/Aktuellt.vue";
 import Video from "./views/Video.vue";
 
 Vue.use(Router);
@@ -24,9 +24,9 @@ export default new Router({
       component: Cv
     },
     {
-      path: "/pagang",
-      name: "pagang",
-      component: Pagang
+      path: "/aktuellt",
+      name: "aktuellt",
+      component: Aktuellt
     },
     {
       path: "/galleri",

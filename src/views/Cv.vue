@@ -18,10 +18,20 @@
           <div class="meritWrapper">
             <h4>Utbildning</h4>
             <div>
-              <p>Filmskådespeleri 2, 30 hp Stockholms dramatiska högskola 2018-2019</p>
-              <p>Åsa folkhögskola: grundutbildning rysk – svensk kontakttolk 2017-2018</p>
-              <p>Filmskådespeleri 1 30 hp Stockholms dramatiska högskola 2014</p>
-              <p>Teaterhögskolan i Stockholm 2007-2010 (skådespelarprogrammet)</p>
+              <p>
+                Filmskådespeleri 2, 30 hp Stockholms dramatiska högskola
+                2018-2019
+              </p>
+              <p>
+                Åsa folkhögskola: grundutbildning rysk – svensk kontakttolk
+                2017-2018
+              </p>
+              <p>
+                Filmskådespeleri 1 30 hp Stockholms dramatiska högskola 2014
+              </p>
+              <p>
+                Teaterhögskolan i Stockholm 2007-2010 (skådespelarprogrammet)
+              </p>
               <p>Studiefrämjandet: Monologkurs 2007</p>
               <p>St:Eriks gymnasium, teaterlinjen 2003-2006</p>
             </div>
@@ -35,15 +45,24 @@
             </div>
             <div>
               <h5>20 sätt att överleva högstadiet</h5>
-              <p>4:e teatern.Roller: Överlevare/Evgeni Leonov Regi: Lotta Östlin-Stenshäll. 2015</p>
+              <p>
+                4:e teatern.Roller: Överlevare/Evgeni Leonov Regi: Lotta
+                Östlin-Stenshäll. 2015
+              </p>
             </div>
             <div>
               <h5>Vi som blev kvar</h5>
-              <p>Teateri. Roller: Bloggaren, Wilhelm, Ivan. Regi: Anna Sjövall 2015</p>
+              <p>
+                Teateri. Roller: Bloggaren, Wilhelm, Ivan. Regi: Anna Sjövall
+                2015
+              </p>
             </div>
             <div>
               <h5>LANA 24-7</h5>
-              <p>Teateri. Roller: Evgeni Leonov, Pappan, Roboten, Lillasystern. Regi: Vera Veljovic 2015</p>
+              <p>
+                Teateri. Roller: Evgeni Leonov, Pappan, Roboten, Lillasystern.
+                Regi: Vera Veljovic 2015
+              </p>
             </div>
 
             <div>
@@ -57,96 +76,55 @@
             <div>
               <h5>Som glöd under snö</h5>
               <p>
-                Teateri. Roll: Peppo ”Per-Erik”.
-                Regi: Maja Salomonsson 2011
+                Teateri. Roll: Peppo ”Per-Erik”. Regi: Maja Salomonsson 2011
               </p>
             </div>
 
             <div>
               <h5>Måsen</h5>
               <p>
-                Smålands musik och teater. Roll: Konstantin Treplev.
-                Regi: Leif Adolfsson 2010
+                Smålands musik och teater. Roll: Konstantin Treplev. Regi: Leif
+                Adolfsson 2010
               </p>
             </div>
             <div>
               <h5>Melancholia</h5>
               <p>
-                Slutproduktion på Teaterhögskolan i Stockholm.
-                Roll: Herr Glas. Regi: Ellen Lamm 2010
+                Slutproduktion på Teaterhögskolan i Stockholm. Roll: Herr Glas.
+                Regi: Ellen Lamm 2010
               </p>
             </div>
             <div>
               <h5>Swedish history X</h5>
-              <p>Slutproduktion på Teaterhögskolan i Stockholm. Roller: Bagaren, Kung Erik, Nils i Söderby, Agda, Klas Tott, Ankarström. Regi: Pontus Stenshäll 2009</p>
+              <p>
+                Slutproduktion på Teaterhögskolan i Stockholm. Roller: Bagaren,
+                Kung Erik, Nils i Söderby, Agda, Klas Tott, Ankarström. Regi:
+                Pontus Stenshäll 2009
+              </p>
             </div>
 
             <div>
               <h5>Henrik och Pernille</h5>
-              <p>Medevi brunnsteater. Roller: Arv, Präst Regi: Per Holmberg 2008</p>
+              <p>
+                Medevi brunnsteater. Roller: Arv, Präst Regi: Per Holmberg 2008
+              </p>
             </div>
 
             <h4>Tv och Film</h4>
 
-            <div>
-              <h5>Hyvlingsfällan</h5>
-              <!--  <p>Handelsanställdas fackförbund</p> -->
-              <p>Roll: Programledare Regi: Stefan Wrenfelt 2018</p>
-            </div>
-            <div>
-              <h5>Johan Falk: Slutet</h5>
-              <p>
-                Strix drama Roll: Kaganovich.
-                Regi: Rikard Holm. 2015
-              </p>
-            </div>
-            <div>
-              <h5>Ikea (reklamfilm)</h5>
-              <p>Roll: Killen med chokladen. Regi: Jens Jonsson 2014</p>
-            </div>
-            <div>
-              <h5>Kardo</h5>
-              <p>
-                VGIK (Ryska filmhögskolan)
-                Roll: Rysktalande man.
-                Regi: Svetlana Sigaleva 2012
-              </p>
-            </div>
-            <div>
-              <h5>Aphelium</h5>
-              <p>Roll: Självmordsbombare. Regi: Mikis Mazarakiz 2006</p>
-            </div>
-            <div>
-              <h5>Momentum (Kortfilm)</h5>
-              <p>
-                Roll: Ung kille.
-                Regi: Malin Berg, Andreas Tillnert och Fabian Yanez 2004
-              </p>
-            </div>
-            <div>
-              <h5>The Bumblebee (Kortfilm)</h5>
-              <p>Ung kille. Regi Mikis Mazarakiz 2003</p>
+            <div v-for="film in tvOchFilm" :key="film.header">
+              <h5>{{ film.header }}</h5>
+              <p>{{ film.body }}</p>
             </div>
           </div>
           <div class="meritWrapper">
             <h4>Regi</h4>
-            <div>
-              <h5>Ge inte upp</h5>
+            <div v-for="merit in regi" :key="merit.title">
+              <h5>
+                {{ merit.title }}
+              </h5>
               <p>
-                Regisserat och klippt videon till Dreaming of Space låten
-                Ge inte upp i samarbete med Andreas Granér. 2019
-              </p>
-              <h5>Bara vara vän</h5>
-              <p>Regisserat, filmat och klippt kampanjfilmen Bara vara kompis i samarbete med Elina Blomberg till Kompis Sverige. 2019.</p>
-              <h5>Frivilliga familjehem</h5>
-              <p>
-                Regisserat och filmat en informationsfilm för Frivilliga familjehem
-                tillsammans med Lina. E Johansson. 2018
-              </p>
-              <h5>Jag är kompis</h5>
-              <p>
-                Regisserat, filmat och klippt kampanjfilmen Jag är kompis
-                i samarbete med Elina Blomberg till Kompis Sverige. 2017
+                {{ merit.body }} <span> {{ merit.year }}</span>
               </p>
             </div>
           </div>
@@ -154,13 +132,18 @@
             <h4>Dokumentär</h4>
             <div>
               <h5>Vi var de som åkte</h5>
-              <p>En dokumentär som jag håller på att färdigställa. Den handlar om min familjs exil från Chile som jag regisserat och filmat.</p>
+              <p>
+                En dokumentär som jag håller på att färdigställa. Den handlar om
+                min familjs exil från Chile som jag regisserat och filmat.
+              </p>
               <p>Filmen tar upp frågor om migration och identitet. 2019</p>
             </div>
             <h4>Radioteater</h4>
             <div>
               <h5>Näsan</h5>
-              <p>Roller: Alla roller utom sjuksystern. Regi: Homero Alvarez. 2016</p>
+              <p>
+                Roller: Alla roller utom sjuksystern. Regi: Homero Alvarez. 2016
+              </p>
             </div>
           </div>
           <div class="meritWrapper">
@@ -176,10 +159,12 @@
             <div>
               <p>Sjunger och komponerar låtar i bandet Dreaming of Space.</p>
               <p>Musikledare på Bambi. 2017 – nuvarande</p>
-              <p>Komponerade musiken till Bara va kompis för Kompis Sverige. 2019</p>
               <p>
-                Komponerade musiken till 4:e teaterns föreställning
-                20 sätt att överleva högstadiet. 2015
+                Komponerade musiken till Bara va kompis för Kompis Sverige. 2019
+              </p>
+              <p>
+                Komponerade musiken till 4:e teaterns föreställning 20 sätt att
+                överleva högstadiet. 2015
               </p>
             </div>
           </div>
@@ -197,7 +182,10 @@
             <h4>Övrigt</h4>
             <div>
               <p>Har ryska och spanska som modersmål.</p>
-              <p>Varit Ersättare i Vård och omsorgsnämnden i Vänsterpartiet Sollentuna 2019</p>
+              <p>
+                Varit Ersättare i Vård och omsorgsnämnden i Vänsterpartiet
+                Sollentuna 2019
+              </p>
               <p>EU-valledare för Vänsterpartiet i Sollentuna 2019</p>
               <p>Arbetar som volontär för Kompis Sverige.</p>
               <p>Driver den ideella föreningen Scenkonst nu.</p>
@@ -215,14 +203,96 @@ export default {
   name: "Cv",
   data() {
     return {
-      picture: this.pictures
+      // lägg så småningom in alla olika kategorier här istället för i markup
+      tvOchFilm: [
+        {
+          header: "Bäckström säsong 2",
+          body: `
+          Roll: Tsar Nikolaj II. Regi: Andreas Öhman.
+          Yellowbird, ARD Degeto och Film i Väst 2022.`,
+        },
+        {
+          header: "Drugdealer",
+          body: `
+          Roll: Knarklangare från Abchazien.
+          Manus: Jonathan Unge och Isabella Rodriguez.
+          Regissör: Isabella Rodriguez.
+          French quarter film 2021`,
+        },
+        {
+          header: "Eagels säsong 3",
+          body: `
+          Roll: Bartender
+          Regi: Carl-Petter Montell
+          New Stories 2021`,
+        },
+        {
+          header: "Hyvlingsfällan",
+          body: `Roll: Programledare Regi: Stefan Wrenfelt 2018`,
+        },
+        {
+          header: "Johan Falk: Slutet",
+          body: `Strix drama Roll: Kaganovich. Regi: Rikard Holm. 2015`,
+        },
+        {
+          header: "Ikea (reklamfilm)",
+          body: `Roll: Killen med chokladen. Regi: Jens Jonsson 2014`,
+        },
+        {
+          header: "Kardo",
+          body: `VGIK (Ryska filmhögskolan) Roll: Rysktalande man. Regi: Svetlana
+                Sigaleva 2012`,
+        },
+        {
+          header: "Aphelium",
+          body: `Roll: Självmordsbombare. Regi: Mikis Mazarakiz 2006`,
+        },
+        {
+          header: "Momentum (Kortfilm)",
+          body: `Roll: Ung kille. Regi: Malin Berg, Andreas Tillnert och Fabian
+                Yanez 2004`,
+        },
+        {
+          header: "The Bumblebee (Kortfilm)",
+          body: `Ung kille. Regi Mikis Mazarakiz 2003`,
+        },
+      ],
+      regi: [
+        {
+          title: "Ge inte upp",
+          body: `Regisserat och klippt videon till Dreaming of Space låten Ge
+                inte upp i samarbete med Andreas Granér.`,
+          year: "2019",
+        },
+        {
+          title: "Bara vara vän",
+          body: `   Regisserat, filmat och klippt kampanjfilmen Bara vara kompis i
+                samarbete med Elina Blomberg till Kompis Sverige.`,
+          year: "2019",
+        },
+        {
+          title: "Frivilliga familjehem",
+          body: `Regisserat och filmat en informationsfilm för Frivilliga
+                familjehem tillsammans med Lina. E Johansson.`,
+          year: "2018",
+        },
+        {
+          title: "Jag är kompis",
+          body: `Regisserat, filmat och klippt kampanjfilmen Jag är kompis i
+                samarbete med Elina Blomberg till Kompis Sverige. `,
+          year: "2017",
+        },
+        { title: "", body: ``, year: "" },
+        { title: "", body: ``, year: "" },
+      ],
     };
   },
+
   computed: {
     pictures() {
       return this.$store.getters.pictures;
-    }
-  }
+    },
+  },
 };
 </script>
 

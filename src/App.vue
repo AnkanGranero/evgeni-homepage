@@ -23,7 +23,7 @@ export default {
     HeaderComponent,
     CellPhoneMenu,
     BackToTop,
-    Footer
+    Footer,
   },
   metaInfo() {
     return {
@@ -32,9 +32,9 @@ export default {
         {
           vmid: "description",
           name: "description",
-          content: "hemsida till skådespelare/musiker/regisörr Evgeni Leonov"
-        }
-      ]
+          content: "hemsida till skådespelare/musiker/regisörr Evgeni Leonov",
+        },
+      ],
     };
   },
   computed: {
@@ -43,13 +43,13 @@ export default {
     },
     showCellphoneMenu() {
       return this.$store.getters.showCellphoneMenuStatus;
-    }
+    },
   },
   methods: {
     clickedOverlay() {
       this.$store.dispatch("clickedOnPage", false);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -162,7 +162,7 @@ a:hover {
   height: 432px;
 }
 
-#paGang {
+#aktuellt {
   object-position: 0% 20%;
   opacity: 0.8;
 }
