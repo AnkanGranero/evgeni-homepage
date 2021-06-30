@@ -1,5 +1,5 @@
 export const newsObject = [{
-        src: "./images/Bäckström 2.jpeg",
+        src: "./images/backstrom_2.jpeg",
         header: "Bäckström säsong 2",
         bodytext: `Är aktuell som Tsar Nikolaj II i Bäckström säsong 2.
         Producerad av Yellowbird för C More och TV4 i samproduktion med ARD Degeto och Film i Väst. Serien regisseras av Andreas Öhman och Manuel Concha.

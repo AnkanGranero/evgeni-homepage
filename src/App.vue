@@ -107,7 +107,7 @@ body {
 
 span {
   font-family: "Ilisarniq-LightItalic";
-  color: green;
+  /* color: green; */
 }
 
 h2 {
