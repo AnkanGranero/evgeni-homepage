@@ -133,10 +133,10 @@
             <div>
               <h5>Vi var de som åkte</h5>
               <p>
-                En dokumentär som jag håller på att färdigställa. Den handlar om
-                min familjs exil från Chile som jag regisserat och filmat.
+                Skrivit manus, regisserat och klippt dokumentärfilmen ”Vi var de
+                som åkte” som handlar om mina morföräldrar som flydde från Chile
+                efter militärkuppen den 11 september 1973 till Sverige. 2021
               </p>
-              <p>Filmen tar upp frågor om migration och identitet. 2019</p>
             </div>
             <h4>Radioteater</h4>
             <div>
@@ -187,7 +187,7 @@
                 Sollentuna 2019
               </p>
               <p>EU-valledare för Vänsterpartiet i Sollentuna 2019</p>
-              <p>Arbetar som volontär för Kompis Sverige.</p>
+              <p>Arbetat som volontär för Kompis Sverige.</p>
               <p>Driver den ideella föreningen Scenkonst nu.</p>
               <p>Spelar akustisk gitarr och piano.</p>
             </div>
@@ -205,6 +205,10 @@ export default {
     return {
       // lägg så småningom in alla olika kategorier här istället för i markup
       tvOchFilm: [
+        {
+          header: "Clas Ohlson reklam",
+          body: "Roll: Clas Ohlson anställd. Regi: Tom Malmros BRF 2021",
+        },
         {
           header: "Bäckström säsong 2",
           body: `

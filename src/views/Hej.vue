@@ -15,9 +15,9 @@
           turnerat runt om i Sverige i flera år. En av dessa föreställningar har
           varit en egenskriven monologföreställning som jag har spelat i både
           Sverige och Ryssland på svenska, ryska och spanska. Jag har även
-          medverkat i film och reklam, bl.a. Johan Falk: Slutet, Ikea och dom
-          kommande tv-serierna Bäckström säsong 2, Drugdealer och Eagles säsong
-          3.
+          medverkat i film, reklam och tv-serier, bl.a. Johan Falk: Slutet, Ikea
+          reklam, Eagles säsong 3 och de kommande serierna Bäckström säsong 2
+          och Drugdealer.
         </p>
         <p>
           På Stockholms dramatiska högskola har jag gått kurserna
@@ -34,9 +34,9 @@
           och arbetar som musikledare på daglig verksamhet. Parallellt med mitt
           konstnärskap har jag utbildat mig till rysk – svensk kontakttolk och
           arbetar i offentlig sektor. Jag har även ett starkt samhällsengagemang
-          och arbetar som volontär för Kompis Sverige och är även politiskt
-          aktiv. Jag älskar att träffa nya människor, utvecklas och lära mig nya
-          saker. Hör gärna av dig om du vill samarbeta.
+          och är engagerad i Kompis Sverige. Jag älskar att träffa nya
+          människor, utvecklas och lära mig nya saker. Hör gärna av dig om du
+          vill samarbeta.
         </p>
       </div>
     </div>

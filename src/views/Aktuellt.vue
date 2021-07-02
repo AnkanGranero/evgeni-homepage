@@ -2,7 +2,7 @@
   <div id="aktuelltWrapper">
     <h1>Aktuellt!</h1>
     <div class="body-wrapper body-content">
-      <div v-for="news in newsObject" :key="news.id">
+      <div v-for="news in newsObject" class="newsObject" :key="news.id">
         <h4>{{ news.header }}</h4>
         <div class="text-wrapper">
           <p>{{ news.bodytext }}</p>
@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .body-wrapper {
   margin-bottom: 10%;
   display: flex;
@@ -48,6 +48,12 @@ h4 {
 #aktuelltWrapper {
   display: flex;
   justify-content: center;
+}
+
+.newsObject {
+  @media only screen and (min-width: $pad) {
+    margin-bottom: 5%;
+  }
 }
 
 .text-wrapper {

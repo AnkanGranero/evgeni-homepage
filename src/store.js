@@ -30,12 +30,12 @@ export default new Vuex.Store({
       name: "Flight to Santiago (Monologföreställning)",
 
     },
-    {
+/*     {
       link: "https://www.youtube.com/embed/FmHpjzFHWDk",
       type: ["Skådespelare"],
       name: "Ikeareklam",
       site: "youtube",
-    },
+    }, */
     {
       link: "https://player.vimeo.com/video/238588753",
       type: ["Regissör"],

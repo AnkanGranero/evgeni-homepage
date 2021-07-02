@@ -15,14 +15,16 @@ export const newsObject = [{
       {
         src: "./images/Eagles.jpeg",
         header: "Eagles säsong 3",
-        bodytext: `Har en liten roll som Bartender 
-        i den kommande säsongen som har premiär den 4 juni 2021.
-        Serien kommer att släppas på SVT play och är regisserad av 
-        Carl-Petter Montell. Producerad av New Stories.`
+        bodytext: `Har en liten roll som bartender i den tredje säsongen som nu finns på SVT play! Serien är regisserad av Carl-Petter Montell och producerad av New Stories.`
+      },
+      {
+        src: "./images/clas.png",
+        header: "Clas Ohlson",
+        bodytext: `Är aktuell i en kommande reklamfilm för Clas Ohlson som släpps under hösten 2021. Regisserad av Tom Malmros och producerad av BRF.`
       },
       {
         
-        src: "./images/viSomAkte.jpg",
+        src: "./images/viSomAkte.png",
         header: "Vi var de som åkte",
         bodytext:  `Min dokumentärfilm ”Vi var de som åkte” är äntligen klar!
         Filmen handlar om mina morföräldrar Alejandro Cuevas och Marta Cid som 
