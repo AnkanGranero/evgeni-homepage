@@ -9,7 +9,7 @@
           Jag heter Evgeni Leonov och är {{ age }} år gammal. Jag utbildade mig
           till skådespelare på Teaterhögskolan i Stockholm 2007-2010. Sedan jag
           blev färdig med utbildningen har jag arbetat som frilansande
-          skådespelare i olika delar av Sverige. B.la. på Smålands musik och
+          skådespelare i olika delar av Sverige. Bl.a. på Smålands musik och
           teater och Teateri i Jönköping och på 4:e teatern i Västerås. Jag har
           medverkat i många föreställningar som varit riktade till ungdomar och
           turnerat runt om i Sverige i flera år. En av dessa föreställningar har

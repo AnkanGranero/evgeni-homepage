@@ -8,12 +8,19 @@ export default new Vuex.Store({
     videoTypes: ["Skådespelare", "Regissör", "Musik"],
     chosenVideoType: "Skådespelare",
   
-    videos: [{
+    videos: [
+    {
+        link: "https://player.vimeo.com/video/584612796?h=74ee990e56",
+        type:["Skådespelare"],
+        name: "Eagles"
+      },
+      {
       link: "https://player.vimeo.com/video/144140675",
       type: ["Skådespelare"],
       name: "Showreel (Johan Falk)"
 
-    }, {
+    },
+     {
       href: "https://urplay.se/program/209216-vad-ska-vi-gora-idag-ryska-bengt-och-bodil-far-besok?fbclid=IwAR1vX21dOZ1uJc3XOrqaMd7xF9sVdcKJ6l_EDuBVSIyMoidQQVzo6L4lwQU?cmpid=del:cl:20190708:urplay",
       img: "/images/svt.jpg",
       type: ["Skådespelare"],
@@ -199,12 +206,11 @@ export default new Vuex.Store({
   },
   actions: {
     clickedOnPage({ commit }, payload) {
-
+      console.log("clicked on PAGE");
 
       commit("changeVideoDropDownState", payload)
     },
     clickedOnHamburger({ commit }) {
-
       
       commit("toggleCellphoneMenuStatus")
     },

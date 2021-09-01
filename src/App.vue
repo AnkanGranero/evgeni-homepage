@@ -46,9 +46,9 @@ export default {
     },
   },
   methods: {
-    clickedOverlay() {
+    /*     clickedOverlay() {
       this.$store.dispatch("clickedOnPage", false);
-    },
+    }, */
   },
 };
 </script>
@@ -169,7 +169,11 @@ a:hover {
 
 .viewWrapper {
   display: inline-block;
+  width: 100%;
   margin-bottom: 5%;
+  @media only screen and (min-width: $desktop) {
+    min-height: 1900px;
+  }
 }
 p {
   font-size: 22px;

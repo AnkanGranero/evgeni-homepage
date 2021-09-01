@@ -1,10 +1,15 @@
 <template>
   <div>
+    <div v-if="dropDown" @click="dropDown = false" class="overlayz" />
     <div class="headerWrapper">
       <div class="topMenu">
         <div class="nameWrapper">
           <h2>EVGENI LEONOV</h2>
-          <img :src="logoHamburger[0].src" class="hamburger" @click="clickedHamburger" />
+          <img
+            :src="logoHamburger[0].src"
+            class="hamburger"
+            @click="clickedHamburger"
+          />
         </div>
       </div>
 
@@ -16,24 +21,25 @@
         </div>
         <div class="menu">
           <li v-for="view in views" :key="view.name">
-            <router-link :to="view.link">{{view.name}}</router-link>
+            <router-link :to="view.link">{{ view.name }}</router-link>
           </li>
           <li>
             <div class="dropdown">
-              <a class="videoLink">Video</a>
-
-              <div class="dropdownContent">
-                <router-link
-                  class="dropdownLink"
-                  v-for="type in videoTypes"
-                  :to="{name: 'video', params: { videoType: type}}"
-                  :key="type.index"
-                >{{type}}</router-link>
-              </div>
+              <a class="videoLink" @click="dropDown = true">Video</a>
             </div>
           </li>
         </div>
       </div>
+    </div>
+    <div class="dropdownContent" :class="{ active: dropDown }">
+      <router-link
+        @click.native="dropDown = false"
+        class="dropdownLink"
+        v-for="type in videoTypes"
+        :to="{ name: 'video', params: { videoType: type } }"
+        :key="type.index"
+        >{{ type }}</router-link
+      >
     </div>
   </div>
 </template>
@@ -43,17 +49,15 @@ export default {
   name: "headerComponent",
   data() {
     return {
-      hover: false
+      dropDown: false,
+      overlay: false,
     };
   },
 
   methods: {
-    videoDropClicked() {
-      this.$store.dispatch("clickedOnPage", true);
-    },
     clickedHamburger() {
       this.$store.dispatch("clickedOnHamburger");
-    }
+    },
   },
 
   computed: {
@@ -64,18 +68,18 @@ export default {
       return this.$store.getters.dropdownContentStatus;
     },
     views() {
-      return this.$store.getters.views.filter(item => item.name != "Video");
+      return this.$store.getters.views.filter((item) => item.name != "Video");
     },
     logos() {
       return this.$store.getters.logos;
     },
     logoLinks() {
-      return this.$store.getters.logos.filter(l => l.type === "logolink");
+      return this.$store.getters.logos.filter((l) => l.type === "logolink");
     },
     logoHamburger() {
-      return this.$store.getters.logos.filter(l => l.name === "hamburger");
-    }
-  }
+      return this.$store.getters.logos.filter((l) => l.name === "hamburger");
+    },
+  },
 };
 </script>
 
@@ -89,22 +93,23 @@ li {
   color: black;
   font-family: "Ilisarniq-Light";
   position: relative;
-  z-index: 2;
+
   height: 200px;
 }
 .dropdownContent {
   display: none;
   position: absolute;
   right: 0;
+  top: 168px;
   flex-direction: column;
-
   background: rgb(141, 235, 141);
   height: 200px;
   padding: 10px;
-
-  margin-top: 1em;
   justify-content: space-evenly;
-  z-index: 2;
+  z-index: 5;
+}
+.active {
+  display: flex;
 }
 .dropdown:hover .dropdownContent {
   display: flex;
@@ -139,51 +144,49 @@ a.router-link-exact-active {
 .topMenu {
   position: relative;
   width: 100%;
-
   height: 60px;
-
-  background: rgb(141, 235, 141);
+  flex-grow: 2;
+  @media only screen and (min-width: $pad) {
+    height: unset;
+    padding-bottom: 10px;
+  }
   display: flex;
-  padding-top: 2%;
-  padding-bottom: 0%;
+  background: rgb(141, 235, 141);
   @media only screen and (max-width: $mobile) {
     flex-wrap: wrap;
-    /*   padding: 0; */
   }
 }
 /* ---------------------------wrappers----------------------------------------------------- */
 .menuWrapper {
   display: flex;
   background: rgb(176, 246, 255);
-
+  padding: 0.7% 0;
   width: 100%;
   height: 40px;
+  flex-grow: 1;
 
   @media only screen and (max-width: $mobile) {
     top: 76px;
   }
 }
 .headerWrapper {
-  @media only screen and (max-width: $mobile) {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 3;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+
+  @media only screen and (min-width: $pad) {
+    position: relative;
+    height: 168px;
   }
 }
 
 .nameWrapper {
-  margin-top: 0%;
-
-  padding: 40px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding: 10px 40px;
   word-spacing: 10px;
   white-space: nowrap;
-  position: relative;
-  top: -40%;
   flex: 1 1 560px;
   img {
     display: none;
@@ -206,7 +209,6 @@ a.router-link-exact-active {
     h2 {
       font-size: 30px;
       letter-spacing: 0;
-
       margin-left: 5%;
       @media only screen and (max-width: $smallMobile) {
         font-size: 25px;
@@ -301,5 +303,14 @@ a.router-link-exact-active {
     display: none;
   }
   /*  margin-top: 2%; */
+}
+
+.overlayz {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.3;
+  z-index: 4;
 }
 </style>
