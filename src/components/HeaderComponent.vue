@@ -146,7 +146,7 @@ a.router-link-exact-active {
   width: 100%;
   height: 60px;
   flex-grow: 2;
-  @media only screen and (min-width: $pad) {
+  @media only screen and (min-width: $tablet) {
     height: unset;
     padding-bottom: 10px;
   }
@@ -177,7 +177,7 @@ a.router-link-exact-active {
   width: 100%;
   z-index: 3;
 
-  @media only screen and (min-width: $pad) {
+  @media only screen and (min-width: $tablet) {
     position: relative;
     height: 168px;
   }
@@ -242,7 +242,7 @@ a.router-link-exact-active {
 .logoWrapper img {
   max-height: 100%;
   margin-right: 30px;
-  @media only screen and (max-width: $pad) {
+  @media only screen and (max-width: $tablet) {
     display: none;
   }
   @media only screen and (max-width: $mobile) {
@@ -292,7 +292,7 @@ a.router-link-exact-active {
     margin: 30px;
     margin-top: 6px;
     padding: 0;
-    @media only screen and (max-width: $pad) {
+    @media only screen and (max-width: $tablet) {
       font-size: 17px;
       margin: 15px;
       margin-top: 8px;

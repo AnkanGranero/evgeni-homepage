@@ -208,7 +208,7 @@ li {
   margin: 40px;
   margin-top: 0%;
 
-  @media only screen and (max-width: $pad) {
+  @media only screen and (max-width: $tablet) {
     padding: 0;
     margin: 30px;
     margin-top: 0;
@@ -218,7 +218,7 @@ li {
 .routerViewWrapper {
   margin-bottom: 0;
   margin-top: 8%;
-  @media only screen and (max-width: $pad) {
+  @media only screen and (max-width: $tablet) {
     /*    margin-top: 20%; */
     margin-bottom: 14%;
   }

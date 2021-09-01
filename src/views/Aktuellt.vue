@@ -51,7 +51,7 @@ h4 {
 }
 
 .newsObject {
-  @media only screen and (min-width: $pad) {
+  @media only screen and (min-width: $tablet) {
     margin-bottom: 5%;
   }
 }

@@ -1,8 +1,6 @@
     <template>
   <footer class="footerWrapper">
-    <p>
-      <span>Kontakta mig:</span> 070 402 46 06
-    </p>
+    <p><span>Kontakta mig:</span> 070 402 46 06</p>
 
     <a :href="mailLogo[0].href">
       <img :src="mailLogo[0].src" />
@@ -17,15 +15,15 @@ export default {
   name: "Footer",
   computed: {
     mailLogo() {
-      return this.$store.getters.logos.filter(l => l.name === "mail");
-    }
-  }
+      return this.$store.getters.logos.filter((l) => l.name === "mail");
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 span {
   color: black;
-  @media only screen and (max-width: $pad) {
+  @media only screen and (max-width: $tablet) {
     display: none;
   }
 }
