@@ -3,15 +3,18 @@
     <div v-if="dropDown" @click="dropDown = false" class="overlayz" />
     <div class="headerWrapper">
       <div class="topMenu">
-        <div class="nameWrapper">
-          <h2>EVGENI LEONOV</h2>
-          <Hamburger />
-        </div>
+        <h2 class="topMenu__header">EVGENI LEONOV</h2>
+        <Hamburger />
       </div>
 
-      <div class="menuWrapper">
-        <div class="logoWrapper">
-          <a v-for="logo in logoLinks" :href="logo.href" :key="logo.name">
+      <div class="bottomMenu">
+        <div class="links">
+          <a
+            v-for="logo in logoLinks"
+            :href="logo.href"
+            :key="logo.name"
+            class="links__link"
+          >
             <img :src="logo.src" alt />
           </a>
         </div>
@@ -123,20 +126,31 @@ a.router-link-exact-active {
 .menu a:hover {
   cursor: pointer;
 }
-/* .topMenu {
+.topMenu {
   position: relative;
   height: 60px;
   background: rgb(141, 235, 141);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   font-size: 30px;
   letter-spacing: 0;
   @media only screen and (min-width: $tablet) {
-    height: unset;
-    padding-bottom: 10px;
+    flex-grow: 2;
   }
-} */
-.topMenu {
+  &__header {
+    font-size: 25px;
+    letter-spacing: 0;
+    margin-left: 20px;
+    @media only screen and (min-width: $tablet) {
+      font-size: 60px;
+      margin-bottom: 10px;
+      margin-left: 40px;
+      letter-spacing: 4px;
+    }
+  }
+}
+.topMenuOld {
   position: relative;
   width: 100%;
   height: 60px;
@@ -173,36 +187,20 @@ a.router-link-exact-active {
     top: -10px;
     align-items: center;
     justify-content: space-between;
-
-    h2 {
-      font-size: 30px;
-      letter-spacing: 0;
-      margin-left: 5%;
-      @media only screen and (max-width: $smallMobile) {
-        font-size: 25px;
-      }
-    }
-    img {
-      display: block;
-      height: 70%;
-      margin-right: 20px;
-      @media only screen and (max-width: $smallMobile) {
-        height: 60%;
-      }
-    }
   }
   @media only screen and (max-width: $smallMobile) {
     top: -5px;
   }
 }
 /* ---------------------------wrappers----------------------------------------------------- */
-.menuWrapper {
+.bottomMenu {
   display: flex;
   background: rgb(176, 246, 255);
   padding: 0.7% 0;
   width: 100%;
   height: 40px;
-  flex-grow: 1;
+  align-content: center;
+  justify-content: space-between;
 
   @media only screen and (max-width: $mobile) {
     top: 76px;
@@ -222,44 +220,23 @@ a.router-link-exact-active {
   }
 }
 
-.logoWrapper {
-  width: 100%;
-  height: 35px;
-
+.links {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 2%;
-  flex: 1 1 360px;
-  @media only screen and (max-width: $mobile) {
-  }
-}
-.logoWrapper img {
-  max-height: 100%;
-  margin-right: 30px;
-}
-.logoWrapper {
+  justify-content: space-around;
   width: 100%;
-  height: 35px;
-  margin-left: 40px;
-  white-space: nowrap;
-
-  /*   display: flex;
-  justify-content: space-evenly; */
-
-  & a {
-    display: contents;
-  }
-
-  @media only screen and (max-width: $smallMobile) {
-    margin: 0;
+  &__link {
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+  }
+  @media only screen and (min-width: $tablet) {
+    width: 40%;
+    margin-left: 40px;
+    display: flex;
+    justify-content: flex-start;
   }
 }
-.logoWrapper img {
+.links img {
   max-height: 70%;
-  margin-top: 8px;
-  margin-right: 40px;
 
   @media only screen and (max-width: $smallMobile) {
     margin-right: 0;
@@ -269,11 +246,11 @@ a.router-link-exact-active {
 .menu {
   display: flex;
   white-space: nowrap;
-
+  margin-right: 40px;
   justify-content: space-between;
   align-content: center;
   right: 0px;
-  width: 100%;
+  width: 40%;
 
   & li {
     margin: 30px;
