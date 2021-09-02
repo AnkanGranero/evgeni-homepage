@@ -5,16 +5,12 @@
       <div class="topMenu">
         <div class="nameWrapper">
           <h2>EVGENI LEONOV</h2>
-          <img
-            :src="logoHamburger[0].src"
-            class="hamburger"
-            @click="clickedHamburger"
-          />
+          <Hamburger />
         </div>
       </div>
 
       <div class="menuWrapper">
-        <div class="logoWrapperMobile">
+        <div class="logoWrapper">
           <a v-for="logo in logoLinks" :href="logo.href" :key="logo.name">
             <img :src="logo.src" alt />
           </a>
@@ -35,9 +31,9 @@
       <router-link
         @click.native="dropDown = false"
         class="dropdownLink"
-        v-for="type in videoTypes"
+        v-for="type in Object.values(VIDEO_TYPES)"
         :to="{ name: 'video', params: { videoType: type } }"
-        :key="type.index"
+        :key="type"
         >{{ type }}</router-link
       >
     </div>
@@ -45,39 +41,26 @@
 </template>
 
 <script>
+import { VIDEO_TYPES } from "@/media/media.js";
+import Hamburger from "./Hamburger.vue";
 export default {
   name: "headerComponent",
+  components: {
+    Hamburger,
+  },
   data() {
     return {
       dropDown: false,
       overlay: false,
+      VIDEO_TYPES,
     };
   },
-
-  methods: {
-    clickedHamburger() {
-      this.$store.dispatch("clickedOnHamburger");
-    },
-  },
-
   computed: {
-    videoTypes() {
-      return (this.videoType = this.$store.getters.videoTypes);
-    },
-    dropIsActive() {
-      return this.$store.getters.dropdownContentStatus;
-    },
     views() {
       return this.$store.getters.views.filter((item) => item.name != "Video");
     },
-    logos() {
-      return this.$store.getters.logos;
-    },
     logoLinks() {
       return this.$store.getters.logos.filter((l) => l.type === "logolink");
-    },
-    logoHamburger() {
-      return this.$store.getters.logos.filter((l) => l.name === "hamburger");
     },
   },
 };
@@ -140,7 +123,19 @@ a.router-link-exact-active {
 .menu a:hover {
   cursor: pointer;
 }
-
+/* .topMenu {
+  position: relative;
+  height: 60px;
+  background: rgb(141, 235, 141);
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  letter-spacing: 0;
+  @media only screen and (min-width: $tablet) {
+    height: unset;
+    padding-bottom: 10px;
+  }
+} */
 .topMenu {
   position: relative;
   width: 100%;
@@ -156,33 +151,6 @@ a.router-link-exact-active {
     flex-wrap: wrap;
   }
 }
-/* ---------------------------wrappers----------------------------------------------------- */
-.menuWrapper {
-  display: flex;
-  background: rgb(176, 246, 255);
-  padding: 0.7% 0;
-  width: 100%;
-  height: 40px;
-  flex-grow: 1;
-
-  @media only screen and (max-width: $mobile) {
-    top: 76px;
-  }
-}
-.headerWrapper {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 3;
-
-  @media only screen and (min-width: $tablet) {
-    position: relative;
-    height: 168px;
-  }
-}
-
 .nameWrapper {
   padding: 10px 40px;
   word-spacing: 10px;
@@ -227,6 +195,32 @@ a.router-link-exact-active {
     top: -5px;
   }
 }
+/* ---------------------------wrappers----------------------------------------------------- */
+.menuWrapper {
+  display: flex;
+  background: rgb(176, 246, 255);
+  padding: 0.7% 0;
+  width: 100%;
+  height: 40px;
+  flex-grow: 1;
+
+  @media only screen and (max-width: $mobile) {
+    top: 76px;
+  }
+}
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+
+  @media only screen and (min-width: $tablet) {
+    position: relative;
+    height: 168px;
+  }
+}
 
 .logoWrapper {
   width: 100%;
@@ -242,15 +236,8 @@ a.router-link-exact-active {
 .logoWrapper img {
   max-height: 100%;
   margin-right: 30px;
-  @media only screen and (max-width: $tablet) {
-    display: none;
-  }
-  @media only screen and (max-width: $mobile) {
-    height: 25px;
-    display: none;
-  }
 }
-.logoWrapperMobile {
+.logoWrapper {
   width: 100%;
   height: 35px;
   margin-left: 40px;
@@ -269,7 +256,7 @@ a.router-link-exact-active {
     justify-content: space-evenly;
   }
 }
-.logoWrapperMobile img {
+.logoWrapper img {
   max-height: 70%;
   margin-top: 8px;
   margin-right: 40px;

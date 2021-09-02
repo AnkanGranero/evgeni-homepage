@@ -2,8 +2,8 @@
   <footer class="footerWrapper">
     <p><span>Kontakta mig:</span> 070 402 46 06</p>
 
-    <a :href="mailLogo[0].href">
-      <img :src="mailLogo[0].src" />
+    <a :href="mailLogo.href">
+      <img :src="mailLogo.src" />
     </a>
     <p>
       <span>evgenileonov1987@gmail.com</span>
@@ -15,7 +15,7 @@ export default {
   name: "Footer",
   computed: {
     mailLogo() {
-      return this.$store.getters.logos.filter((l) => l.name === "mail");
+      return this.$store.getters.getLogoByName("mail");
     },
   },
 };

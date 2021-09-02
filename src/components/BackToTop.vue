@@ -1,6 +1,6 @@
 <template>
   <div class="elevator">
-    <img :src="arrow" alt="arrow" class="arrow" />
+    <!-- <img src="../../public/images/arrow" alt="arrow" class="arrow" /> -->
   </div>
 </template>
 <script>
@@ -10,8 +10,8 @@ export default {
   computed: {
     arrow() {
       return this.$store.getters.arrow;
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

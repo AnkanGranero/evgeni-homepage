@@ -6,7 +6,13 @@
 
     <div class="wrapper">
       <div class="overlay">
-        <div v-for="picture in pictures" :key="picture.id" div class="cell" :class="picture.id">
+        <div
+          v-for="picture in pictures"
+          :key="picture.id"
+          div
+          class="cell"
+          :class="picture.id"
+        >
           <img
             :src="picture.src"
             v-bind:class="picture.class"
@@ -19,30 +25,33 @@
   </div>
 </template>
 <script>
+import { pictures } from "@/media";
+
 export default {
   name: "Galleri",
   data() {
     return {
       moduleOpen: false,
-      moduleImage: ""
+      moduleImage: "",
+      pictures,
     };
   },
 
   computed: {
     pictures() {
-      return this.$store.getters.pictures.filter(p => p.subject === "Evgeni");
+      return this.pictures.filter((p) => p.subject === "Evgeni");
     },
     picturesRow1() {
-      return this.$store.getters.pictures.filter(picture => picture.id < 4);
+      return this.pictures.filter((picture) => picture.id < 4);
     },
     picturesRow2() {
-      return this.$store.getters.pictures.filter(
-        picture => picture.id < 7 && picture.id > 3
+      return this.pictures.filter(
+        (picture) => picture.id < 7 && picture.id > 3
       );
     },
     picturesRow3() {
-      return this.$store.getters.pictures.filter(picture => picture.id > 6);
-    }
+      return this.pictures.filter((picture) => picture.id > 6);
+    },
   },
 
   methods: {
@@ -50,18 +59,14 @@ export default {
       this.moduleOpen = !this.moduleOpen;
     },
     getModuleImage(id) {
-      this.moduleImage = this.pictures.filter(p => p.id == id)[0].src;
-    }
-  }
+      this.moduleImage = this.pictures.filter((p) => p.id == id)[0].src;
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 #gallery {
-  /* height: 100vh; */
-  /* margin-bottom: 10%; */
-  /* position: relative; */
   @media only screen and (max-width: $mobile) {
-    /* margin-bottom: auto; */
   }
 }
 

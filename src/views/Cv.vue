@@ -199,10 +199,12 @@
 </template>
 
 <script>
+import { pictures } from "@/media";
 export default {
   name: "Cv",
   data() {
     return {
+      pictures,
       // lägg så småningom in alla olika kategorier här istället för i markup
       tvOchFilm: [
         {
@@ -290,12 +292,6 @@ export default {
         { title: "", body: ``, year: "" },
       ],
     };
-  },
-
-  computed: {
-    pictures() {
-      return this.$store.getters.pictures;
-    },
   },
 };
 </script>

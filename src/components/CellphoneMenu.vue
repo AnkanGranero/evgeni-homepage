@@ -6,28 +6,36 @@
           v-if="view.params"
           @click.native="closeOverlay"
           size="phone"
-          :to="{name: 'video', params: { videoType: 'Skådespelare'}}"
-        >{{view.name}}</router-link>
-        <router-link v-else @click.native="closeOverlay" :to="view.link">{{view.name}}</router-link>
+          :to="{ name: 'video', params: { videoType: VIDEO_TYPES.ACTOR } }"
+          >{{ view.name }}</router-link
+        >
+        <router-link v-else @click.native="closeOverlay" :to="view.link">{{
+          view.name
+        }}</router-link>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
+import { VIDEO_TYPES } from "@/media/";
 export default {
   name: "CellPhoneMenu",
-
+  data() {
+    return {
+      VIDEO_TYPES,
+    };
+  },
   computed: {
     views() {
       return this.$store.getters.views;
-    }
+    },
   },
   methods: {
     closeOverlay() {
       this.$store.dispatch("closeOverlay", false);
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

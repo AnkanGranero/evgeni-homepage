@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="appWrapper">
-      <HeaderComponent></HeaderComponent>
+      <HeaderComponent />
       <cell-phone-menu v-if="showCellphoneMenu"></cell-phone-menu>
       <div class="routerViewWrapper">
         <router-view :key="$route.fullPath"></router-view>
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import HeaderComponent from "./components/HeaderComponent.vue";
+import HeaderComponent from "./components/header/HeaderComponent.vue";
 import BackToTop from "./components/BackToTop.vue";
 import CellPhoneMenu from "./components/CellphoneMenu.vue";
 import Footer from "./components/Footer.vue";
@@ -44,11 +44,6 @@ export default {
     showCellphoneMenu() {
       return this.$store.getters.showCellphoneMenuStatus;
     },
-  },
-  methods: {
-    /*     clickedOverlay() {
-      this.$store.dispatch("clickedOnPage", false);
-    }, */
   },
 };
 </script>
@@ -219,7 +214,6 @@ li {
   margin-bottom: 0;
   margin-top: 8%;
   @media only screen and (max-width: $tablet) {
-    /*    margin-top: 20%; */
     margin-bottom: 14%;
   }
   @media only screen and (max-width: $mobile) {

@@ -5,13 +5,14 @@
         <router-link
           class="videoTypeLinks"
           v-for="type in videoTypes"
-          :to="{ name: 'video', params: { videoType: type}}"
+          :to="{ name: 'video', params: { videoType: type } }"
           :key="type.index"
-        >{{type}}</router-link>
+          >{{ type }}</router-link
+        >
       </div>
       <div class="videoBox" v-for="video in videosByType" :key="video.index">
-        <h3>{{video.name}}</h3>
-        <div class="videoWrapper" :class="{'youtube': video.site}">
+        <h3>{{ video.name }}</h3>
+        <div class="videoWrapper" :class="{ youtube: video.site }">
           <iframe
             v-if="video.link"
             class="iframe"
@@ -30,29 +31,31 @@
 </template>
 
 <script>
+import { videos } from "@/media";
 export default {
   name: "Video",
   props: ["size"],
-
+  data() {
+    return {
+      videos,
+    };
+  },
   computed: {
-    videos() {
-      return this.$store.getters.videos;
-    },
     videoType() {
       return this.$route.params.videoType;
     },
     videosByType() {
-      return this.videos.filter(v => v.type.includes(this.videoType));
+      return this.videos.filter((v) => v.type.includes(this.videoType));
     },
     videoTypes() {
       return this.$store.getters.videoTypes;
-    }
+    },
   },
   methods: {
     clickedVideoType(payload) {
       this.store.dispatch(clickedVideoType, payload);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -63,8 +66,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 5em; */
-  /* width:100vw; */
 }
 .videoTypes {
   display: none;
