@@ -8,7 +8,6 @@ export default {
     opacity: {
       type: String,
       validator: function (value) {
-        // The value must match one of these strings
         return ["light", "dark"].includes(value);
       },
     },
