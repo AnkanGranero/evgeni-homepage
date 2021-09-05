@@ -227,6 +227,9 @@ a.router-link-exact-active {
   &__link {
     display: flex;
     align-items: center;
+    @media only screen and (min-width: $tablet) {
+      margin-right: 2%;
+    }
   }
   @media only screen and (min-width: $tablet) {
     width: 40%;

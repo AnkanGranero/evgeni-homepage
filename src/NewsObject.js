@@ -24,7 +24,7 @@ export const newsObject = [{
       },
       {
         
-        src: "./images/viSomAkte.png",
+        src: "./images/viSomAkte.jpg",
         header: "Vi var de som åkte",
         bodytext:  `Min dokumentärfilm ”Vi var de som åkte” är äntligen klar!
         Filmen handlar om mina morföräldrar Alejandro Cuevas och Marta Cid som 
