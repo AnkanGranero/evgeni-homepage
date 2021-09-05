@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import { logos} from '@/media/'
+import {logos} from '@/media/'
 
 Vue.use(Vuex);
 
@@ -14,55 +14,40 @@ export default new Vuex.Store({
       { name: "Video", link: "/Video", params: ["Skådespelare", "Regissör", "Musik"],  },
       { name: "Cv", link: "/Cv" }
     ],
-    showCellphoneMenu: false
+    showCellphoneMenu: false,
+    isOverlayVisible: false,
+    desktopDropdown: false
   },
   mutations: {
     changeVideoDropDownState(state, payload) {
-
       state.videoDropDownIsActive = payload
-      
     },
-    toggleCellphoneMenuStatus(state) {
-
-      state.showCellphoneMenu = !state.showCellphoneMenu
+    setOverlay(state, bool) {
+      state.isOverlayVisible = bool
     },
-    changeCellphoneMenuStatus(state, payload) {
+    setCellphoneMenu(state, payload) {
       state.showCellphoneMenu = payload
     },
+    setIsDropdownVisible(state, bool) {
+      state.desktopDropdown = bool
+      console.log(state.desktopDropdown);
+    },
     changeVideoType(state, payload) {
-
-    
       state.chosenVideoType = payload
     }
 
   },
   actions: {
-    clickedOnPage({ commit }, payload) {
-      commit("changeVideoDropDownState", payload)
-    },
-    clickedOnHamburger({ commit }) {
-      
-      commit("toggleCellphoneMenuStatus")
-    },
-    closeOverlay({commit}, payload) {
-      commit("changeCellphoneMenuStatus", payload)
-     
-    },
     clickedVideoType({ commit}, payload) {
       commit("changeVideoType", payload)
+    },
+    closeOverlay({ commit}) {
+      commit("setOverlay", false);
+      commit('setIsDropdownVisible',false);
+      commit('setCellphoneMenu', false)
     }
-
-
-
-
   },
   getters: {
-    videos: (state) => {
-      return state.videos
-    },
-    videoTypes: (state) => {
-      return state.videoTypes
-    },
     videoDropDownStatus: (state) => {
       return state.videoDropDownIsActive
     },
@@ -78,5 +63,8 @@ export default new Vuex.Store({
     getLogoByName: (state) => (logoName) =>  {
       return state.logos.find((logo) => logo.name ===  logoName);
     },
+    getIsOverlayVisible: (state) => {
+      return state.isOverlayVisible || state.showCellphoneMenu || state.desktopDropdown
+    }
   }
 });

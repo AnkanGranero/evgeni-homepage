@@ -1,110 +1,90 @@
 <template>
-  <div>
-    <div v-if="dropDown" @click="dropDown = false" class="overlayz" />
-    <div class="headerWrapper">
-      <div class="topMenu">
-        <h2 class="topMenu__header">EVGENI LEONOV</h2>
-        <Hamburger />
-      </div>
-
-      <div class="bottomMenu">
-        <div class="links">
-          <a
-            v-for="logo in logoLinks"
-            :href="logo.href"
-            :key="logo.name"
-            class="links__link"
-          >
-            <img :src="logo.src" alt />
-          </a>
-        </div>
-        <div class="menu">
-          <li v-for="view in views" :key="view.name">
-            <router-link :to="view.link">{{ view.name }}</router-link>
-          </li>
-          <li>
-            <div class="dropdown">
-              <a class="videoLink" @click="dropDown = true">Video</a>
-            </div>
-          </li>
-        </div>
-      </div>
+  <div class="headerWrapper">
+    <CellphoneMenu
+      v-if="cellphoneMenuIsOpen"
+      @closeCellphoneMenu="cellphoneMenuIsOpen = false"
+    />
+    <DesktopMenu
+      v-if="desktopMenuIsOpen"
+      @closeDesktopMenu="desktopMenuIsOpen = false"
+    />
+    <div class="topMenu">
+      <h2 class="topMenu__header">EVGENI LEONOV</h2>
+      <img
+        :src="getLogoByName('hamburger').src"
+        class="hamburger"
+        @click="cellphoneMenuIsOpen = true"
+      />
     </div>
-    <div class="dropdownContent" :class="{ active: dropDown }">
-      <router-link
-        @click.native="dropDown = false"
-        class="dropdownLink"
-        v-for="type in Object.values(VIDEO_TYPES)"
-        :to="{ name: 'video', params: { videoType: type } }"
-        :key="type"
-        >{{ type }}</router-link
-      >
+
+    <div class="bottomMenu">
+      <div class="links">
+        <a
+          v-for="logo in logoLinks"
+          :href="logo.href"
+          :key="logo.name"
+          class="links__link"
+        >
+          <img :src="logo.src" alt />
+        </a>
+      </div>
+      <div class="menu">
+        <li v-for="view in views" :key="view.name">
+          <router-link :to="view.link">{{ view.name }}</router-link>
+        </li>
+        <li>
+          <div class="dropdown">
+            <a class="videoLink" @click="desktopMenuIsOpen = true">Video</a>
+          </div>
+        </li>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { VIDEO_TYPES } from "@/media/media.js";
-import Hamburger from "./Hamburger.vue";
+import { VIDEO_TYPES, getLogoByName, logos } from "@/media/";
+import { Hamburger, CellphoneMenu, DesktopMenu } from "./index";
+
 export default {
   name: "headerComponent",
   components: {
     Hamburger,
+    DesktopMenu,
+    CellphoneMenu,
   },
   data() {
     return {
-      dropDown: false,
-      overlay: false,
       VIDEO_TYPES,
+      desktopMenuIsOpen: false,
+      cellphoneMenuIsOpen: false,
     };
+  },
+  methods: {
+    getLogoByName,
   },
   computed: {
     views() {
       return this.$store.getters.views.filter((item) => item.name != "Video");
     },
     logoLinks() {
-      return this.$store.getters.logos.filter((l) => l.type === "logolink");
+      return logos.filter((l) => l.type === "logolink");
     },
   },
 };
 </script>
 
 <style lang="scss">
+.hamburger {
+  height: 60%;
+  margin-right: 20px;
+  @media only screen and (min-width: $tablet) {
+    display: none;
+  }
+}
 li {
   color: white;
   list-style: none;
-}
-
-.dropdown {
-  color: black;
-  font-family: "Ilisarniq-Light";
-  position: relative;
-
-  height: 200px;
-}
-.dropdownContent {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 168px;
-  flex-direction: column;
-  background: rgb(141, 235, 141);
-  height: 200px;
-  padding: 10px;
-  justify-content: space-evenly;
-  z-index: 5;
-}
-.active {
-  display: flex;
-}
-.dropdown:hover .dropdownContent {
-  display: flex;
-}
-.dropdownContent a {
-  padding: 20px;
-}
-.dropdownContent a:hover {
-  background-color: #61d470;
 }
 
 a.router-link-exact-active {

@@ -2,7 +2,6 @@
   <div id="app">
     <div class="appWrapper">
       <HeaderComponent />
-      <cell-phone-menu v-if="showCellphoneMenu"></cell-phone-menu>
       <div class="routerViewWrapper">
         <router-view :key="$route.fullPath"></router-view>
       </div>
@@ -14,14 +13,12 @@
 <script>
 import HeaderComponent from "./components/header/HeaderComponent.vue";
 import BackToTop from "./components/BackToTop.vue";
-import CellPhoneMenu from "./components/CellphoneMenu.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
   name: "app",
   components: {
     HeaderComponent,
-    CellPhoneMenu,
     BackToTop,
     Footer,
   },
@@ -36,14 +33,6 @@ export default {
         },
       ],
     };
-  },
-  computed: {
-    videoDropDownStatus() {
-      return this.$store.getters.videoDropDownStatus;
-    },
-    showCellphoneMenu() {
-      return this.$store.getters.showCellphoneMenuStatus;
-    },
   },
 };
 </script>

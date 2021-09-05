@@ -1,3 +1,6 @@
+export function getLogoByName(name) {
+  return logos.find(logo => logo.name === name ) 
+}
 export const logos = [
       { name:"hamburger" ,
         src:"./logos/hamburger.png",

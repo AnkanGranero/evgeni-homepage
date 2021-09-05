@@ -4,7 +4,7 @@
       <div class="videoTypes">
         <router-link
           class="videoTypeLinks"
-          v-for="type in videoTypes"
+          v-for="type in VIDEO_TYPES"
           :to="{ name: 'video', params: { videoType: type } }"
           :key="type.index"
           >{{ type }}</router-link
@@ -31,13 +31,14 @@
 </template>
 
 <script>
-import { videos } from "@/media";
+import { videos, VIDEO_TYPES } from "@/media";
 export default {
   name: "Video",
   props: ["size"],
   data() {
     return {
       videos,
+      VIDEO_TYPES,
     };
   },
   computed: {
@@ -46,9 +47,6 @@ export default {
     },
     videosByType() {
       return this.videos.filter((v) => v.type.includes(this.videoType));
-    },
-    videoTypes() {
-      return this.$store.getters.videoTypes;
     },
   },
   methods: {
@@ -61,7 +59,7 @@ export default {
 
 
 <style lang="scss" scoped>
-> .video-body {
+.video-body {
   display: flex;
   flex-direction: column;
   justify-content: center;

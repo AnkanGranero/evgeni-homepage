@@ -11,11 +11,12 @@
   </footer>
 </template>
 <script>
+import { getLogoByName } from "@/media";
 export default {
   name: "Footer",
   computed: {
     mailLogo() {
-      return this.$store.getters.getLogoByName("mail");
+      return getLogoByName("mail");
     },
   },
 };

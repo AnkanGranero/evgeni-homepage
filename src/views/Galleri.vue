@@ -7,7 +7,7 @@
     <div class="wrapper">
       <div class="overlay">
         <div
-          v-for="picture in pictures"
+          v-for="picture in picturesOnEvgeni"
           :key="picture.id"
           div
           class="cell"
@@ -38,7 +38,7 @@ export default {
   },
 
   computed: {
-    pictures() {
+    picturesOnEvgeni() {
       return this.pictures.filter((p) => p.subject === "Evgeni");
     },
     picturesRow1() {
@@ -57,6 +57,7 @@ export default {
   methods: {
     toggleModule() {
       this.moduleOpen = !this.moduleOpen;
+      this.$store.commit.setOverlay(this.moduleOpen);
     },
     getModuleImage(id) {
       this.moduleImage = this.pictures.filter((p) => p.id == id)[0].src;

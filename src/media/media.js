@@ -3,6 +3,7 @@ export const VIDEO_TYPES = {
   DIRECTOR: "Regissör",
   MUSIC: "Musik"
 }
+
 export const videos = [
     {
         link: "https://player.vimeo.com/video/584612796?h=74ee990e56",
