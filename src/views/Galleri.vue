@@ -63,6 +63,18 @@ export default {
       this.moduleImage = this.pictures.filter((p) => p.id == id)[0].src;
     },
   },
+  metaInfo() {
+    return {
+      title: "Gallery",
+      meta: [
+        {
+          vmid: "description",
+          name: "Gallery",
+          content: "Pictures on Evgeni Leonov",
+        },
+      ],
+    };
+  },
 };
 </script>
 <style lang="scss" scoped>

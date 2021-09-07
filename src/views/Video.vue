@@ -54,6 +54,18 @@ export default {
       this.store.dispatch(clickedVideoType, payload);
     },
   },
+  metaInfo() {
+    return {
+      title: "Videos",
+      meta: [
+        {
+          vmid: "description",
+          name: "Videos",
+          content: "Videos by or with appearances of Evgeni Leonov",
+        },
+      ],
+    };
+  },
 };
 </script>
 

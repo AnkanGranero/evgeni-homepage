@@ -28,7 +28,7 @@ export default {
       meta: [
         {
           vmid: "description",
-          name: "description",
+          name: "Evgeni Leonovs hemsida",
           content: "hemsida till skådespelare/musiker/regisörr Evgeni Leonov",
         },
       ],
@@ -40,49 +40,24 @@ export default {
 <style lang="scss">
 @font-face {
   font-family: "Ilisarniq-Demi";
-  src: url("/evgeni-homepage/fonts/Ilisarniq-Demi.eot");
-  src: url("/evgeni-homepage/fonts/Ilisarniq-Demi.eot?#iefix")
-      format("embedded-opentype"),
-    url("/evgeni-homepage/fonts/Ilisarniq-Demi.woff2") format("woff2"),
-    url("/evgeni-homepage/fonts/Ilisarniq-Demi.woff") format("font-woff"),
-    url("/evgeni-homepage/fonts/Ilisarniq-Demi.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  src: url("/evgeni-homepage/fonts/Ilisarniq-Demi.woff2") format("woff2"),
+    url("/evgeni-homepage/fonts/Ilisarniq-Demi.woff") format("font-woff");
 }
 @font-face {
   font-family: "Ilisarniq-Light";
-  src: url("/evgeni-homepage/fonts/Ilisarniq-Light.eot");
-  src: url("/evgeni-homepage/fonts/Ilisarniq-Light.eot?#iefix")
-      format("embedded-opentype"),
-    url("/evgeni-homepage/fonts/Ilisarniq-Light.woff2") format("woff2"),
-    url("/evgeni-homepage/fonts/Ilisarniq-Light.woff") format("woff"),
-    url("/evgeni-homepage/fonts/Ilisarniq-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  src: url("/evgeni-homepage/fonts/Ilisarniq-Light.woff2") format("woff2"),
+    url("/evgeni-homepage/fonts/Ilisarniq-Light.woff") format("woff");
 }
 @font-face {
   font-family: "Ilisarniq-DemiItalic";
-  src: url("/evgeni-homepage/fonts/Ilisarniq-DemiItalic.eot");
-  src: url("/evgeni-homepage/fonts/Ilisarniq-DemiItalic.eot?#iefix")
-      format("embedded-opentype"),
-    url("/evgeni-homepage/fonts/Ilisarniq-DemiItalic.woff2") format("woff2"),
-    url("/evgeni-homepage/fonts/Ilisarniq-DemiItalic.woff") format("font-woff"),
-    url("/evgeni-homepage/fonts/Ilisarniq-DemiItalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  src: url("/evgeni-homepage/fonts/Ilisarniq-DemiItalic.woff2") format("woff2"),
+    url("/evgeni-homepage/fonts/Ilisarniq-DemiItalic.woff") format("font-woff");
 }
 @font-face {
   font-family: "Ilisarniq-LightItalic";
-  src: url("/evgeni-homepage/fonts/Ilisarniq-LightItalic.eot");
-  src: url("/evgeni-homepage/fonts/Ilisarniq-LightItalic.eot?#iefix")
-      format("embedded-opentype"),
-    url("/evgeni-homepage/fonts/Ilisarniq-LightItalic.woff2") format("woff2"),
-    url("/evgeni-homepage/fonts/Ilisarniq-LightItalic.woff") format("woff"),
-    url("/evgeni-homepage/fonts/Ilisarniq-LightItalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  src: url("/evgeni-homepage/fonts/Ilisarniq-LightItalic.woff2") format("woff2"),
+    url("/evgeni-homepage/fonts/Ilisarniq-LightItalic.woff") format("woff");
 }
-
 body {
   font-family: "Ilisarniq-Demi";
   color: black;
@@ -91,7 +66,6 @@ body {
 
 span {
   font-family: "Ilisarniq-LightItalic";
-  /* color: green; */
 }
 
 h2 {
@@ -125,10 +99,6 @@ a {
 a:hover {
   cursor: pointer;
 }
-
-/* Header-------------------------------------------------------------------------------------- */
-
-/* Body------------------------------------------------------------------------------------- */
 
 .body-content {
   text-align: left;

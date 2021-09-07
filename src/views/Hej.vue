@@ -53,6 +53,19 @@ export default {
       return Math.abs(age_dt.getUTCFullYear() - 1970);
     },
   },
+  metaInfo() {
+    return {
+      title: "Hej",
+      meta: [
+        {
+          vmid: "description",
+          name: "Hej",
+          content: `Jag heter Evgeni Leonov och är ${this.age} år gammal. Jag utbildade mig
+          till skådespelare på Teaterhögskolan i Stockholm 2007-2010.`,
+        },
+      ],
+    };
+  },
 };
 </script>
 

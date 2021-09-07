@@ -27,6 +27,18 @@ export default {
       newsObject,
     };
   },
+  metaInfo() {
+    return {
+      title: "Aktuellt",
+      meta: [
+        {
+          vmid: "description",
+          name: "Aktuellt",
+          content: this.newsObject[0].bodytext.slice(0, 100),
+        },
+      ],
+    };
+  },
 };
 </script>
 

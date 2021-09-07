@@ -9,7 +9,6 @@ Vue.config.productionTip = false;
 Vue.use(Meta, {
   keyName: "metaInfo",
   attribute: "data-vue-meta", 
-
   tagIDKeyName: "vmid",
   refreshOnceOnNavigation: true
 })

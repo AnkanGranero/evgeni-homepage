@@ -293,6 +293,18 @@ export default {
       ],
     };
   },
+  metaInfo() {
+    return {
+      title: "CV",
+      meta: [
+        {
+          vmid: "description",
+          name: "CV",
+          content: "CV of actor/musician/film maker Evgeni Leonov",
+        },
+      ],
+    };
+  },
 };
 </script>
 
