@@ -29,7 +29,7 @@ export default {
         {
           vmid: "description",
           name: "Evgeni Leonovs hemsida",
-          content: "hemsida till skådespelare/musiker/regisörr Evgeni Leonov",
+          content: "hemsida till skådespelare/musiker/regissör Evgeni Leonov",
         },
       ],
     };
