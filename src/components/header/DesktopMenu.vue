@@ -3,7 +3,7 @@
     <Overlay @clickedOnOverlay="closeMenu" opacity="light" />
     <div class="dropdownContent">
       <router-link
-        @click.native="closeMenu = false"
+        @click.native="closeMenu"
         class="dropdownLink"
         v-for="type in Object.values(VIDEO_TYPES)"
         :to="{ name: 'video', params: { videoType: type } }"
