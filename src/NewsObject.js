@@ -4,13 +4,15 @@ export const newsObject = [{
         bodytext: `Är aktuell som Tsar Nikolaj II i Bäckström säsong 2.
         Producerad av Yellowbird för C More och TV4 i samproduktion med ARD Degeto och Film i Väst. Serien regisseras av Andreas Öhman och Manuel Concha.
         Bäckström säsong 2 planeras ha premiär på C More och TV4 under våren 2022.`,
-        subject: "miscellaneous"
+        subject: "miscellaneous",
       },
       {
         src: "./images/svt_logo.png",
         header: `Drugdealer`,
         bodytext: `
-        Är aktuell i komediserien Drugdealer där jag spelar en knarklangare. Serien är producerad av French quarter film och kommer att visas på SVT hösten 2021. Drugdealer är skriven av Isabella Rodriguez och Jonathan Unge och är regisserad av Isabella Rodriguez.`
+        Är aktuell i komediserien Drugdealer där jag spelar en knarklangare. Serien är producerad av French quarter film och kommer att visas på SVT hösten 2021. Drugdealer är skriven av Isabella Rodriguez och Jonathan Unge och är regisserad av Isabella Rodriguez.`,
+        href:"https://vimeo.com/606803854",
+        hrefText: "Se ett klipp från avsnittet här"
       },
       {
         src: "./images/Eagles.jpeg",
