@@ -176,14 +176,16 @@ a.router-link-exact-active {
 .bottomMenu {
   display: flex;
   background: rgb(176, 246, 255);
-  padding: 0.7% 0;
-  width: 100%;
+  padding: 0.7% 20px;
   height: 40px;
   align-content: center;
   justify-content: space-between;
-
-  @media only screen and (max-width: $mobile) {
-    top: 76px;
+  width: 100%;
+  box-sizing: border-box;
+  top: 76px;
+  @media only screen and (min-width: $tablet) {
+    padding: 0.7% 0;
+    box-sizing: initial;
   }
 }
 .headerWrapper {
@@ -202,11 +204,13 @@ a.router-link-exact-active {
 
 .links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   &__link {
     display: flex;
     align-items: center;
+    width: 40px;
+
     @media only screen and (min-width: $tablet) {
       margin-right: 2%;
     }
@@ -215,12 +219,14 @@ a.router-link-exact-active {
     width: 40%;
     margin-left: 40px;
     display: flex;
+  }
+  @media only screen and (min-width: $desktop) {
     justify-content: flex-start;
   }
 }
-.links img {
-  max-height: 70%;
 
+.links img {
+  height: 70%;
   @media only screen and (max-width: $smallMobile) {
     margin-right: 0;
   }

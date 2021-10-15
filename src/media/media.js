@@ -11,6 +11,11 @@ export const videos = [
         type:["Skådespelare"],
         name: "Drugdealer"
       },
+      {
+        link: "https://player.vimeo.com/video/625628137?h=ca94cb7340",
+        type: ['Skådespelare'],
+        name: "Clas ohlson reklam"
+      },
     {
         link: "https://player.vimeo.com/video/584612796?h=74ee990e56",
         type:["Skådespelare"],

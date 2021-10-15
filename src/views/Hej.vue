@@ -16,8 +16,8 @@
           varit en egenskriven monologföreställning som jag har spelat i både
           Sverige och Ryssland på svenska, ryska och spanska. Jag har även
           medverkat i film, reklam och tv-serier, bl.a. Johan Falk: Slutet, Ikea
-          reklam, Eagles säsong 3 och de kommande serierna Bäckström säsong 2
-          och Drugdealer.
+          och Clas Ohlson reklam, Eagles säsong 3, Drugdealer och den kommande
+          serien Bäckström säsong 2.
         </p>
         <p>
           På Stockholms dramatiska högskola har jag gått kurserna
