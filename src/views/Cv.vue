@@ -19,6 +19,9 @@
             <h4>Utbildning</h4>
             <div>
               <p>
+                Auktoriserad rysk – svensk kontakttolk. Kammarkollegiet 2021
+              </p>
+              <p>
                 Filmskådespeleri 2, 30 hp Stockholms dramatiska högskola
                 2018-2019
               </p>
@@ -207,6 +210,30 @@ export default {
       pictures,
       // lägg så småningom in alla olika kategorier här istället för i markup
       tvOchFilm: [
+        {
+          header: "Save little William",
+          body: `Roll: Utomjording. Regi: Aleksei Kokorin. Gerasimov Institute of Cinematography 2021`,
+        },
+        {
+          header: "The Playlist",
+          body: `Roll: Kontorsanställd. Regi: Per-Olav Sørensen. Yellowbird 2022`,
+        },
+
+        {
+          header: "Motståndaren",
+          body: `Roll: Rysk brottartränare (Voice over) Regi: Milad Alami.
+                 Tangy 2022`,
+        },
+        {
+          header: "Clas Ohlson reklam 3",
+
+          body: "Roll: Clas Ohlson anställd. Regi: Tom Malmros BFR 2021",
+        },
+        {
+          header: "Clas Ohlson reklam 2",
+          body: "Roll: Clas Ohlson anställd. Regi: Tom Malmros BRF 2021",
+        },
+
         {
           header: "Clas Ohlson reklam",
           body: "Roll: Clas Ohlson anställd. Regi: Tom Malmros BRF 2021",

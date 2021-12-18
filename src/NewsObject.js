@@ -10,7 +10,7 @@ export const newsObject = [{
         src: "./images/svt_logo.png",
         header: `Drugdealer`,
         bodytext: `
-        Är aktuell i komediserien Drugdealer där jag spelar en knarklangare. Serien är producerad av French quarter film och kommer att visas på SVT hösten 2021. Drugdealer är skriven av Isabella Rodriguez och Jonathan Unge och är regisserad av Isabella Rodriguez.`,
+        Är aktuell i komediserien Drugdealer där jag spelar en knarklangare. Serien är producerad av French quarter film och finns nu tillgänglig på SVT play. Drugdealer är skriven av Isabella Rodriguez och Jonathan Unge och är regisserad av Isabella Rodriguez.`,
         href:"https://vimeo.com/606803854",
         hrefText: "Se ett klipp från avsnittet här"
       },
@@ -22,7 +22,9 @@ export const newsObject = [{
       {
         src: "./images/clas.png",
         header: "Clas Ohlson",
-        bodytext: `Är aktuell i en kommande reklamfilm för Clas Ohlson som släpps under hösten 2021. Regisserad av Tom Malmros och producerad av BRF.`
+        bodytext: `Är aktuell i tre reklamfilmer för Clas Ohlson som har premiär
+                   under hösten och vintern 2021. Reklamfilmerna är regisserade av
+                   Tom Malmros och producerade av BRF.`
       },
       {
         

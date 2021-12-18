@@ -33,10 +33,10 @@
           Jag sjunger, spelar och komponerar låtar i bandet Dreaming of Space
           och arbetar som musikledare på daglig verksamhet. Parallellt med mitt
           konstnärskap har jag utbildat mig till rysk – svensk kontakttolk och
-          arbetar i offentlig sektor. Jag har även ett starkt samhällsengagemang
-          och är engagerad i Kompis Sverige. Jag älskar att träffa nya
-          människor, utvecklas och lära mig nya saker. Hör gärna av dig om du
-          vill samarbeta.
+          arbetar i offentlig sektor som auktoriserad tolk. Jag har även ett
+          starkt samhällsengagemang och är engagerad i Kompis Sverige. Jag
+          älskar att träffa nya människor, utvecklas och lära mig nya saker. Hör
+          gärna av dig om du vill samarbeta.
         </p>
       </div>
     </div>

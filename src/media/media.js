@@ -5,7 +5,17 @@ export const VIDEO_TYPES = {
 }
 
 export const videos = [
-
+      {
+        link: "https://www.youtube.com/embed/fJCwzUi_32k",
+        type: ["Regissör"],
+        title: "Intervjuad av Museum of Memory and Human Rights (spanska)",
+        site: "youtube"
+      },
+      {
+        link: "https://player.vimeo.com/video/642655580?h=d3254d9cc8",
+        type: ["Skådespelare"],
+        name: "Clas ohlson reklam 2"
+      },
       {
         link: "https://player.vimeo.com/video/606803854?h=2c1ac7e341",
         type:["Skådespelare"],
@@ -44,7 +54,6 @@ export const videos = [
       name: "Flight to Santiago (Monologföreställning)",
 
     },
-
     {
       link: "https://player.vimeo.com/video/238588753",
       type: ["Regissör"],
