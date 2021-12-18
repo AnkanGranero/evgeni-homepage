@@ -48,5 +48,22 @@ export const pictures = [
         class: "long",
         subject: "Evgeni"
       },
-      
+      {
+        id:10,
+        src: "./images/Rosor.jpg" ,
+        class: "wide",
+        subject: "Evgeni"
+      },
+            {
+        id:11,
+        src: "./images/Start.jpeg" ,
+        class: "wide",
+        subject: "Evgeni"
+      },
+            {
+        id:12,
+        src: "./images/Kavaj.jpeg" ,
+        class: "long",
+        subject: "Evgeni"
+      },      
     ]

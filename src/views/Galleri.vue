@@ -41,17 +41,6 @@ export default {
     picturesOnEvgeni() {
       return this.pictures.filter((p) => p.subject === "Evgeni");
     },
-    picturesRow1() {
-      return this.pictures.filter((picture) => picture.id < 4);
-    },
-    picturesRow2() {
-      return this.pictures.filter(
-        (picture) => picture.id < 7 && picture.id > 3
-      );
-    },
-    picturesRow3() {
-      return this.pictures.filter((picture) => picture.id > 6);
-    },
   },
 
   methods: {
@@ -96,7 +85,7 @@ export default {
 .overlay {
   display: grid;
   grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 30% 30% 30%;
+  grid-template-rows: repeat(5, 1fr);
 
   grid-gap: 5%;
   top: 0;
@@ -107,14 +96,15 @@ export default {
   @media only screen and (max-width: $mobile) {
     margin-top: 10%;
     grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 15% 15% 15%;
+    grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 5%;
     grid-row-gap: 15%;
   }
 }
 .cell {
   width: 100%;
-  height: 100%;
+  height: 30vw;
+  cursor: pointer;
 }
 .cell img {
   width: 100%;
